@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="Restpln" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="510.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" color="#4c4c51" height="27.42" radius="13.4375" width="28.33" />
+         </effect>
+      </Button>
+      <Button cancelButton="true" layoutX="250.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" color="#4c4c51" height="24.67" radius="12.75" width="28.33" />
+         </effect>
+      </Button>
+      <Label layoutX="57.0" layoutY="25.0" text="Restaurant Information" textFill="#e7e5e5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="150.0" layoutY="100.0" minHeight="330.0" prefHeight="330.0" prefWidth="550.0" style="-fx-background-color: #02030A;" vgap="5.0">
+         <children>
+            <Label text="Restaurant Name:" textFill="#b7c3d7">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="Address:" textFill="#b7c3d7" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label text="Postal Code:" textFill="#b7c3d7" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label text="Registration Date:" textAlignment="CENTER" textFill="#b7c3d7" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label text="Introduction:" textFill="#b7c3d7" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TextField id="RestName" fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="Test Reman Shop" GridPane.columnIndex="1" />
+            <TextField fx:id="AddressField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="No.10, Xitucheng Road" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="100083" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="ResgDateField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="2020.3.29" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ScrollPane opacity="0.9" prefHeight="110.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <content>
+                  <TextArea id="RestIntro" opacity="0.9" prefHeight="200.0" prefWidth="335.0" text="123" wrapText="true" />
+               </content>
+            </ScrollPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="402.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="82.0" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="149.0" minHeight="0.0" prefHeight="142.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</Pane>
