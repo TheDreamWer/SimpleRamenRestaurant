@@ -24,13 +24,13 @@
                 <Insets left="10.0" />
             </HBox.margin>
         </ImageView>
-        <Label text="20200328301" textFill="#b7c3d7" />
-        <Label text="TestUser" textFill="#b7c3d7">
+        <Label id="ID" text="asdf" textFill="#b7c3d7" />
+        <Label id="UserName" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
         </Label>
-        <Label text="2020-03-28" textFill="#b7c3d7">
+        <Label id="Time" textFill="#b7c3d7">
             <HBox.margin>
                 <Insets />
             </HBox.margin>
@@ -40,7 +40,7 @@
                 <Insets />
             </HBox.margin>
         </Label>
-        <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@style.css" text="active">
+        <Button id="Active" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@style.css" text="active">
             <HBox.margin>
                 <Insets />
             </HBox.margin>

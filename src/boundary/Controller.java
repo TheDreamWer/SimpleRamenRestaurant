@@ -1,6 +1,7 @@
 package boundary;
 
 import control.Customer;
+import control.SaveRestInfo;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -67,15 +68,24 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Node[] nodes = new Node[10];
-        for (int i = 0; i < nodes.length; i++) {
+        Node[] nodes = new Node[customer.getOrderList().Getter().size()];
+        int i = 0;
+        for (i = 0; i < nodes.length; i++) {
             try {
 
                 final int j = i;
                 nodes[i] = FXMLLoader.load(getClass().getResource("Item.fxml"));
 
-                //give the items some effect
+                Parent p = (Parent)nodes[i];
+                Label id = (Label) p.lookup("#ID");
+                Label name = (Label) p.lookup("#UserName");
+                Label time = (Label) p.lookup("#Time");
+                Button active = (Button) p.lookup("#Active");
+                id.setText("" + customer.getOrderList().Getter().get(i).getOrderID());
+                name.setText("" + customer.getOrderList().Getter().get(i).getCode());
+                time.setText("" + customer.getOrderList().Getter().get(i).getGenerateTime());
 
+                //give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
                     nodes[j].setStyle("-fx-background-color : #0A0E3F");
                 });
@@ -83,6 +93,8 @@ public class Controller implements Initializable {
                     nodes[j].setStyle("-fx-background-color : #02030A");
                 });
                 pnItems.getChildren().add(nodes[i]);
+
+                //System.out.println(customer.getOrderList().Getter().get(i).getOrderID());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -104,8 +116,14 @@ public class Controller implements Initializable {
             pnlOverview.setStyle("-fx-background-color : #02030A");
             pnlOverview.toFront();
             //setOnAction
-            Label l = (Label)pnlOverview.lookup("#TotalOrders");
-            l.setText("24");
+            Label totalOrders = (Label)pnlOverview.lookup("#TotalOrders");
+            totalOrders.setText("" + customer.getOrderList().Getter().size());
+
+            Label totalAmount = (Label)pnlOverview.lookup("#TotalAmount");
+            totalAmount.setText("" + customer.getOrderList().Getter().size());
+
+            Label todayOrders = (Label)pnlOverview.lookup("#TodayOrders");
+            todayOrders.setText("" + customer.getOrderList().Getter().size());
         }
         if(actionEvent.getSource()==btnOrders)
         {
@@ -130,12 +148,23 @@ public class Controller implements Initializable {
                 tf.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-
+                        customer.getRest().setRestName(tf.getText().trim());
                     }
                 });
 
-                TextArea ta = (TextArea) pnlRestaurant.lookup("#RestIntro");
+                ScrollPane sp = (ScrollPane) pnlRestaurant.lookup("#RestIntro");
+                TextArea ta = (TextArea) sp.contentProperty().getValue();
+                ta.setText(customer.getRest().getRestIntro());
 
+                Button ok = (Button) pnlRestaurant.lookup("#OK");
+                ok.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        //System.out.println(ta.getText());
+                        customer.getRest().setRestIntro(ta.getText());
+                        new SaveRestInfo(customer.getRest());
+                    }
+                });
             } catch (IOException e) {
                 e.printStackTrace();
             }

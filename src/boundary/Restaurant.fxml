@@ -11,7 +11,7 @@
 
 <Pane fx:id="Restpln" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="510.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
+      <Button id="OK" layoutX="519.0" layoutY="479.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -19,7 +19,7 @@
             <InnerShadow blurType="ONE_PASS_BOX" color="#4c4c51" height="27.42" radius="13.4375" width="28.33" />
          </effect>
       </Button>
-      <Button cancelButton="true" layoutX="250.0" layoutY="475.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
+      <Button cancelButton="true" layoutX="208.0" layoutY="478.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -55,13 +55,13 @@
                <font>
                   <Font size="15.0" />
                </font></Label>
-            <TextField id="RestName" fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="Test Reman Shop" GridPane.columnIndex="1" />
+            <TextField id="RestName" fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" GridPane.columnIndex="1" />
             <TextField fx:id="AddressField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="No.10, Xitucheng Road" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="100083" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="ResgDateField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="2020.3.29" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ScrollPane opacity="0.9" prefHeight="110.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <ScrollPane id="RestIntro" opacity="0.9" prefHeight="110.0" prefWidth="360.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <content>
-                  <TextArea id="RestIntro" opacity="0.9" prefHeight="200.0" prefWidth="335.0" text="123" wrapText="true" />
+                  <TextArea opacity="0.9" prefHeight="200.0" prefWidth="335.0" wrapText="true" />
                </content>
             </ScrollPane>
          </children>
