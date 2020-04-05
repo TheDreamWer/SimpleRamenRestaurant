@@ -29,7 +29,7 @@ public class SaveRestInfo {
 		String intro = rst.getRestIntro();
 	
 		try {
-			File fl = new File("data/RestInfo.csv");
+			File fl = new File("src/data/RestInfo.csv");
 			if(!fl.exists())
 			{
 				fl.createNewFile();
