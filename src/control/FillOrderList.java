@@ -7,8 +7,8 @@ public class FillOrderList {
     private OrderList list= new OrderList();
 
     public FillOrderList(){
-        File csv = new File("src/data/OrderList.csv");
-        Order temp = new Order();   //建一个空的order
+        File csv = new File("src/entities/OrderList.csv");
+        Order temp = new Order(0);   //建一个空的order
         temp.setOrderID(Long.MAX_VALUE);    //设置不重复ID来保证第一个order不会和空的order相同Id
         Ramen temp_r = new Ramen();
 
@@ -17,16 +17,16 @@ public class FillOrderList {
             String lineDta = "";
             while ((lineDta=textFile.readLine()) != null) {
                 String item[] = lineDta.split(",");
-                if (temp.getOrderID()!=Long.parseLong(item[0]))
+                if (temp.getOrderID()!=Long.parseLong(item[0]))     //判断是否为同一订单信息
                 {
-                    temp = new Order();
+                    temp = new Order(0);
                     temp.setOrderID(Long.parseLong(item[0]));
                     temp.setCode(Integer.parseInt(item[1]));
                     temp.setOrderAmount(Float.parseFloat(item[2]));
                     temp.setPaymentMethod(item[3]);
                     temp.setGenerateTime(item[4]);
                     temp.setRamenList(new ArrayList<Ramen>());
-                    list.Getter().add(temp);
+                    list.getArraylist().add(temp);
                 }
                 temp_r.setSoup(item[5]);
                 temp_r.setNoodles(item[6]);
@@ -41,9 +41,6 @@ public class FillOrderList {
                 temp_r.setExtra_chashu(Integer.parseInt(item[15]));
 
                 temp.getRamenList().add(temp_r);
-                //temp.setter(); 调用temp的setter函数进行赋值
-
-                //lineDta = textFile.readLine();
             }
             textFile.close();
         } catch (FileNotFoundException e) {
@@ -53,7 +50,7 @@ public class FillOrderList {
         }
     }
 
-    public OrderList getter(){
+    public OrderList getOrderlist(){
         return this.list;
     }//返回orderlist对象
 }
