@@ -40,7 +40,7 @@ public class FillRestInfo {
 						cunzai = true;
 						r.setRestID(restid);
 						r.setRestName(splitstr[1]);
-						r.setRestIntro(splitstr[2]);
+						r.setRestIntro(splitstr[2].replace("`+`", "\n"));
 					}
 				}
 				br.close();
