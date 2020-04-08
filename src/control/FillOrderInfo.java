@@ -64,6 +64,15 @@ public class FillOrderInfo{
 
         return order_amount;
     }
+    
+    public float calcRamenAmount(Ramen ramen){
+        float amount = 9.9;
+        amount += ramen.getExtra_nori();
+        amount += ramen.getExtra_boiled_egg();
+        amount += ramen.getExtra_chashu() * 2.;
+        amount += ramen.getBamboo_shoots();
+        return amount;
+    }
 
     public String getSystemTime(){
         SystemTime systemTime = new SystemTime();
