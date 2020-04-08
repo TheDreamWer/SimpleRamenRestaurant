@@ -60,6 +60,7 @@ public class SaveRestInfo {
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write("");
 			int i = 0;
+			intro=intro.replace("\n", "`+`");
 			restlist.add(id+","+name+","+intro);
 			while(i<restlist.size()) {
 				bw.write(restlist.get(i)+"\r\n");
