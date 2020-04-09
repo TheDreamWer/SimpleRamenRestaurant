@@ -8,7 +8,7 @@ public class FillOrderList {
 
     public FillOrderList(){
         File csv = new File("src/entities/OrderList.csv");
-        Order temp = new Order(0);   //建一个空的order
+        Order temp = new Order();   //建一个空的order
         temp.setOrderID(Long.MAX_VALUE);    //设置不重复ID来保证第一个order不会和空的order相同Id
         Ramen temp_r = new Ramen();
 
@@ -19,7 +19,7 @@ public class FillOrderList {
                 String item[] = lineDta.split(",");
                 if (temp.getOrderID()!=Long.parseLong(item[0]))     //判断是否为同一订单信息
                 {
-                    temp = new Order(0);
+                    temp = new Order();
                     temp.setOrderID(Long.parseLong(item[0]));
                     temp.setCode(Integer.parseInt(item[1]));
                     temp.setOrderAmount(Float.parseFloat(item[2]));
