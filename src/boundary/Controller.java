@@ -178,15 +178,17 @@ public class Controller implements Initializable {
             tempRamen.add(new Ramen());
             tempRamen.get(tempRamen.size()-1).setOnion_level(-1);
 
-            //额外的Nori 增减部分
+             //额外的Nori 增减部分
             Label ExtraNori = (Label) pnlMenus.lookup("ExtraNori");
             Button addNori = (Button) pnlMenus.lookup("#addNori");
             addNori.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    ExtraNori.setText(String.valueOf(Integer.parseInt(ExtraNori.getText())+1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
-                    tempRamen.get(tempRamen.size()-1).setExtra_nori(Integer.parseInt(ExtraNori.getText())+1);
+                    if (!ExtraNori.getText().equals("100")) {
+                        ExtraNori.setText(String.valueOf(Integer.parseInt(ExtraNori.getText())+1));
+                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
+                        tempRamen.get(tempRamen.size()-1).setExtra_nori(Integer.parseInt(ExtraNori.getText())+1);
+                    }
                 }
             });
             Button subNori = (Button) pnlMenus.lookup("#subNori");
@@ -206,9 +208,11 @@ public class Controller implements Initializable {
             addChashu.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())+2));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+2));
-                    tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())+2);
+                    if (!ExtraChashu.getText().equals("100")) {
+                        ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())+2));
+                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+2));
+                        tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())+2);
+                    }
                 }
             });
             Button subChashu = (Button) pnlMenus.lookup("#subChashu");
@@ -227,9 +231,11 @@ public class Controller implements Initializable {
             addBoiledEgg.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())+1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
-                    tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())+1);
+                    if (!ExtraBoiledEgg.getText().equals("100")) {
+                        ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())+1));
+                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
+                        tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())+1);
+                    }
                 }
             });
             Button subBoiledEgg = (Button) pnlMenus.lookup("#subBoiledEgg");
@@ -249,9 +255,11 @@ public class Controller implements Initializable {
             addBambooShoot.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())+1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
-                    tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())+1);
+                    if (!BambooShoots.getText().equals("100")) {
+                        BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())+1));
+                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
+                        tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())+1);
+                    }
                 }
             });
             Button subBambooShoot = (Button) pnlMenus.lookup("#subBambooShoot");
@@ -404,12 +412,14 @@ public class Controller implements Initializable {
                 public void changed(ObservableValue<? extends Toggle> changed,
                                     Toggle oldVal, Toggle newVal) {
                     if (groupSpiciness.getSelectedToggle() != null) {
-                        tempRamen.get(tempRamen.size()-1).setSpiciness(Integer.parseInt(
-                                groupSpiciness.getSelectedToggle().getUserData().toString()));
+                        if (groupBoiledEgg.getSelectedToggle().getUserData().toString().equals("No"))
+                            tempRamen.get(tempRamen.size()-1).setSpiciness(0);
+                        else
+                            tempRamen.get(tempRamen.size()-1).setSpiciness(Integer.parseInt(
+                                    groupSpiciness.getSelectedToggle().getUserData().toString()));
                     }
                 }
             });
-
             //添加购物车
             Button addCart = (Button) pnlMenus.lookup("#addcart");
             addCart.setOnAction(new EventHandler<ActionEvent>() {
