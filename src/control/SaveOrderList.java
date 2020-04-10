@@ -18,24 +18,24 @@ public class SaveOrderList {
         FileWriter fw = new FileWriter(csv);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write("");
-        for (int i = 0; i< list.Getter().size(); i++) {
-            for (int j=0;j< list.Getter().get(i).getRamenList().size();j++) {
-                bw.write(String.valueOf(list.Getter().get(i).getOrderID())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getCode())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getOrderAmount())+",");
-                bw.write(list.Getter().get(i).getPaymentMethod()+",");
-                bw.write(list.Getter().get(i).getGenerateTime()+",");
-                bw.write(list.Getter().get(i).getRamen(j).getSoup()+",");
-                bw.write(list.Getter().get(i).getRamen(j).getNoodles()+",");
-                bw.write(list.Getter().get(i).getRamen(j).getOnion_level()+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getNori())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getChashu())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getBoiled_egg())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getSpiciness())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getExtra_nori())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getExtra_boiled_egg())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getBamboo_shoots())+",");
-                bw.write(String.valueOf(list.Getter().get(i).getRamen(j).getExtra_chashu())+"\r\n");
+        for (int i = 0; i< list.getArraylist().size(); i++) {
+            for (int j = 0; j< list.getArraylist().get(i).getRamenList().size(); j++) {
+                bw.write(String.valueOf(list.getArraylist().get(i).getOrderID())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getCode())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getOrderAmount())+",");
+                bw.write(list.getArraylist().get(i).getPaymentMethod()+",");
+                bw.write(list.getArraylist().get(i).getGenerateTime()+",");
+                bw.write(list.getArraylist().get(i).getRamen(j).getSoup()+",");
+                bw.write(list.getArraylist().get(i).getRamen(j).getNoodles()+",");
+                bw.write(list.getArraylist().get(i).getRamen(j).getOnion_level()+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getNori())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getChashu())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getBoiled_egg())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getSpiciness())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_nori())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_boiled_egg())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getBamboo_shoots())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_chashu())+"\r\n");
             }
         }
 
