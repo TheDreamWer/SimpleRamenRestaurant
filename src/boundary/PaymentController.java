@@ -24,10 +24,8 @@ import java.util.ResourceBundle;
 public class PaymentController implements Initializable {
     private Customer customer;
 
-    @FXML
-    private RadioButton[3] payment;// 还没有定义
+    //private RadioButton[3] payment;// 还没有定义
 
-    @FXML
     private Button finish;
 
     public PaymentController(Customer customer){
@@ -43,10 +41,10 @@ public class PaymentController implements Initializable {
 
 
     //    @Override
-//    public void initialize(URL location, ResourceBundle resources) {
-//    }
+    public void initialize(URL location, ResourceBundle resources) {
+    }
 
-
+/*
     public void handleClicks(ActionEvent actionEvent) {
         if (actionEvent.getSource() == payment[0]) {
             String paymentString = payment[0].getSource();
@@ -66,4 +64,5 @@ public class PaymentController implements Initializable {
 
 
     }
+    */
 }

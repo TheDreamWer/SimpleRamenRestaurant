@@ -14,7 +14,7 @@ public class TestCustomerOrder {
 
         OrderList ol = customer.getOrderList();
         System.out.println("the size of orderList.csv: " +
-                customer.getOrderList().Getter().size());
+                customer.getOrderList().getArraylist().size());
 //        customer.addRamen();
         /* Print the last ramen in the ramenList of the draft order */
         System.out.println
@@ -39,6 +39,6 @@ public class TestCustomerOrder {
 
         customer.formOrder();
         System.out.println("the size of orderList.csv: " +
-                customer.getOrderList().Getter().size());
+                customer.getOrderList().getArraylist().size());
     }
 }

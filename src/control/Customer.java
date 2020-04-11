@@ -24,7 +24,7 @@ public class Customer {
         this.fillRestInfo = new FillRestInfo(restID);
         this.fillInRest(); // Load the restaurant info
         this.fillInOrderList();
-        int code = this.orderList.Getter().size();
+        int code = this.orderList.getArraylist().size();
         this.setDraft(new Order());
         this.ramen = new Ramen();    
     }
@@ -78,7 +78,7 @@ public class Customer {
     }
 
     public void fillInOrderList(){
-        this.orderList = this.fillOrderList.getter();
+        this.orderList = this.fillOrderList.getOrderlist();
     }
     
     public String showRestInfo(){
@@ -87,7 +87,7 @@ public class Customer {
     
     public void formOrder()throws IOException{
 
-        this.orderList.Getter().add(this.draft);
+        this.orderList.getArraylist().add(this.draft);
         this.ticket = new Ticket(this.draft);
         this.ticket.printTicket();
         this.saveOrderList();

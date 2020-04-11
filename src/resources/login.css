@@ -1,0 +1,47 @@
+#outStackPane {
+    -fx-background-image: url("./images/login2.png");
+    -fx-background-size: 1280px 800px;
+    -fx-background-repeat: none;
+}
+
+VBox {
+    -fx-background-color: rgba(41, 66, 100, 0.71);
+    -fx-background-radius: 6px;
+    /*-fx-effect: dropshadow(gaussian, black, 10, 0.1, 0, 0);*/
+}
+
+.inputText {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: rgba(256, 256, 256, 0.48);
+    /*-fx-border-bottom: 1px rgba(256, 256, 256, 1);*/
+    /*-fx-base: #1d1d1d;*/
+    -fx-text-fill: rgba(195, 195, 195, 0.6);
+    -fx-border-width: 0 0 1 0;
+    /*-fx-border-radius: 4px;*/
+
+}
+
+.functionButton {
+    -fx-border-radius: 4px;
+}
+
+#SignInButton {
+    -fx-background-color: rgba(253, 110, 106, 0.64);
+}
+
+
+
+#ForgetButton {
+    -fx-background-color: rgba(14, 138, 243, 0.75);
+}
+
+#SignUpButton {
+    -fx-background-color: rgba(253, 0, 23, 0.64);
+}
+
+
+
+#VisitorButton {
+    -fx-background-color: rgba(243, 177, 50, 0.75);
+}
+

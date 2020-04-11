@@ -65,8 +65,8 @@ public class FillOrderInfo{
         return order_amount;
     }
     
-    public float calcRamenAmount(Ramen ramen){
-        float amount = 9.9;
+    public double calcRamenAmount(Ramen ramen){
+        double amount = 9.9;
         amount += ramen.getExtra_nori();
         amount += ramen.getExtra_boiled_egg();
         amount += ramen.getExtra_chashu() * 2.;

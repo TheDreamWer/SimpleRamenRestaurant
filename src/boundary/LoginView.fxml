@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="outStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="800.0" prefWidth="1280.0" styleClass="inputText" stylesheets="@../statics/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.LoginViewController">
+   <children>
+      <VBox fx:id="loginBox" alignment="CENTER" prefHeight="439.0" prefWidth="550.0">
+         <children>
+            <Label prefHeight="76.0" prefWidth="407.0" text="Sign in to Ramen System" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="57.0" prefWidth="326.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="146.0" text="User ID: " textFill="#ffffff8f">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <padding>
+                        <Insets left="45.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="usernameField" prefHeight="43.0" prefWidth="182.0" scaleShape="false" styleClass="inputText">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="326.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="173.0" text="Password: " textFill="#ffffff8f">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <padding>
+                        <Insets left="45.0" />
+                     </padding>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="43.0" prefWidth="150.0" styleClass="inputText" text="123456">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="299.0" spacing="5.0">
+               <children>
+                  <Button fx:id="ForgetButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="188.0" text="Forget Password" textFill="#ffffffcc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SignInButton" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="46.0" prefWidth="144.0" text="Sign in" textFill="#ffffffcc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="299.0" spacing="5.0">
+               <children>
+                  <Button fx:id="VisitorButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="46.0" prefWidth="188.0" text="Visitor" textFill="#ffffffcc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="SignUpButton" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="46.0" prefWidth="143.0" text="Sign up" textFill="#ffffffcc">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="250.0" left="730.0" right="130.0" top="220.0" />
+         </StackPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="23.0" />
+         </padding>
+      </VBox>
+      <Pane fx:id="InfoPane" prefHeight="200.0" prefWidth="200.0">
+         <padding>
+            <Insets bottom="100.0" left="100.0" right="200.0" top="200.0" />
+         </padding>
+         <children>
+            <Label id="restName" layoutX="173.0" layoutY="189.0" text="XX Ramen Restaurant" textFill="#4d4a4a">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label id="restInfo" fx:id="IntroLab" layoutX="198.0" layoutY="247.0" prefHeight="244.0" prefWidth="444.0" text="Intro：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" textFill="#363333" wrapText="true">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateLab" layoutX="176.0" layoutY="601.0" text="Registration Date: 2020-3-28">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+            <Label fx:id="AddressLab" layoutX="176.0" layoutY="515.0" text="Address: xxxxxxxxxxxxxxxxxxxxxx">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+            <Label fx:id="PostalLab" layoutX="176.0" layoutY="560.0" text="Postal code: xxxxx">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

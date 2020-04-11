@@ -1,0 +1,48 @@
+#btnAddToCart
+{
+    -fx-background-color: rgba(238, 83, 0, 0.55);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnAddToCart:hover{
+    -fx-background-color : rgba(255, 119, 0, 0.42);
+}
+#btnAddToCart:pressed
+{
+    -fx-background-color : rgba(255, 51, 0, 0.71);
+}
+
+AnchorPane {
+    -fx-background-image: url("./images/Dashboardpane1.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+
+#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA{
+    -fx-background-color : transparent;
+    -fx-text-fill : #000000;
+    -fx-background-image:url("./images/button_back.png") ;
+}
+
+#btnOK {
+    -fx-background-color: rgba(238, 83, 0, 0.55);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnOK:hover{
+    -fx-background-color : rgba(255, 119, 0, 0.42);
+}
+#btnOK:pressed
+{
+    -fx-background-color : rgba(255, 51, 0, 0.71);
+}
+
+#btnCancel {
+    -fx-background-color: rgba(0, 121, 238, 0.55);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnCancel:hover{
+    -fx-background-color : rgba(0, 123, 255, 0.24);
+}
+#btnCancel:pressed
+{
+    -fx-background-color : rgba(41, 117, 255, 0.71);
+}

@@ -1,48 +1,74 @@
 package control;
 
-import entities.Restaurant;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.w3c.dom.Node;
+import boundary.*;
+
+import java.io.IOException;
 
 public class Main extends Application {
-    private double x, y;
+
+    private Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../boundary/Home.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        //set stage borderless
-        primaryStage.initStyle(StageStyle.DECORATED);
-        primaryStage.setTitle("A Small Ramen Restaurant");
-        primaryStage.getIcons().add(new Image(getClass().getResource("../resources/ramen.png").toURI().toString()));
-
-        //drag it here
-        root.setOnMousePressed(event -> {
-            x = event.getSceneX();
-            y = event.getSceneY();
-        });
-        root.setOnMouseDragged(event -> {
-
-            primaryStage.setX(event.getScreenX() - x);
-            primaryStage.setY(event.getScreenY() - y);
-
-        });
-        primaryStage.show();
-
+//        primaryStage.initStyle(StageStyle.UNDECORATED);
+        this.primaryStage = primaryStage;
+        //showLoginView();
+        showDashboard();
     }
 
+    public void showLoginView() {
+        try {
+            // 载入登录页面
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("../boundary/LoginView.fxml"));
+            Parent root = loader.load();
+            LoginViewController loginViewController = loader.getController();
+            primaryStage.setScene(new Scene(root, 1280, 800));
+            primaryStage.show();
+            
+            // 传递主函数
+            System.out.println(loginViewController);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showDashboard() {
+        try {
+            // 载入登录页面
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("../boundary/Home.fxml"));
+            Parent root = loader.load();
+            DashboardController  DashboardController = loader.getController();
+            primaryStage.setScene(new Scene(root, 1050, 576));
+            primaryStage.show();
+
+            // 传递主函数
+            System.out.println(DashboardController);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
 
     public static void main(String[] args) {
         launch(args);
-
     }
 }
+
