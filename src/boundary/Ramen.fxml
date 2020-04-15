@@ -205,7 +205,7 @@
                               <Insets left="5.0" top="10.0" />
                            </HBox.margin>
                         </Label>
-                        <RadioButton id="NoriNo" fx:id="btnChashuiNo" mnemonicParsing="false" selected="true" text="No">
+                        <RadioButton id="chashuNo" fx:id="btnChashuiNo" mnemonicParsing="false" selected="true" text="No">
                            <font>
                               <Font size="20.0" />
                            </font>
