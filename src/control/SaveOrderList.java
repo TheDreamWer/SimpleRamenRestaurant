@@ -19,7 +19,7 @@ public class SaveOrderList {
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write("");
         for (int i = 0; i< list.getArraylist().size(); i++) {
-            for (int j=0;j< list.getArraylist().get(i).getRamenList().size();j++) {
+            for (int j = 0; j< list.getArraylist().get(i).getRamenList().size(); j++) {
                 bw.write(String.valueOf(list.getArraylist().get(i).getOrderID())+",");
                 bw.write(String.valueOf(list.getArraylist().get(i).getCode())+",");
                 bw.write(String.valueOf(list.getArraylist().get(i).getOrderAmount())+",");

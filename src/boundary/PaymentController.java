@@ -44,25 +44,24 @@ public class PaymentController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-/*
-    public void handleClicks(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == payment[0]) {
-            String paymentString = payment[0].getSource();
-            this.customer.getDraft().setPaymentMethod();
-        }
-        if (actionEvent.getSource() == payment[1]) {
-            String paymentString = payment[1].getSource();
-            this.customer.getDraft().setPaymentMethod();
-        }
-        if (actionEvent.getSource() == payment[2]) {
-            String paymentString = payment[2].getSource();
-            this.customer.getDraft().setPaymentMethod();
-        }
-        if (actionEvent.getSource() == finish) {
-            this.customer.formOrder();
-        }
 
-
-    }
-    */
+//    public void handleClicks(ActionEvent actionEvent) {
+//        if (actionEvent.getSource() == payment[0]) {
+//            String paymentString = payment[0].getSource();
+//            this.customer.getDraft().setPaymentMethod();
+//        }
+//        if (actionEvent.getSource() == payment[1]) {
+//            String paymentString = payment[1].getSource();
+//            this.customer.getDraft().setPaymentMethod();
+//        }
+//        if (actionEvent.getSource() == payment[2]) {
+//            String paymentString = payment[2].getSource();
+//            this.customer.getDraft().setPaymentMethod();
+//        }
+//        if (actionEvent.getSource() == finish) {
+//            this.customer.formOrder();
+//        }
+//
+//
+//    }
 }

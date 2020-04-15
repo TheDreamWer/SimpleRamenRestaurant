@@ -2,6 +2,8 @@ package boundary;
 
 import control.Customer;
 import control.SaveRestInfo;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,10 +21,13 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import entities.*;
+
 public class Controller implements Initializable {
-    private Customer customer = new Customer(1);
+    private Customer business = new Customer(1);
 
     @FXML
     private Pane pnlOrders;
@@ -68,7 +73,15 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Node[] nodes = new Node[customer.getOrderList().getArraylist().size()];
+        Label totalOrders = (Label)pnlOverview.lookup("#TotalOrders");
+        totalOrders.setText("" + business.getOrderList().getArraylist().size());
+
+        Label totalAmount = (Label)pnlOverview.lookup("#TotalAmount");
+        totalAmount.setText("" + business.getOrderList().getSumAmount());
+
+        Label todayOrders = (Label)pnlOverview.lookup("#TodayOrders");
+        todayOrders.setText("" + business.getOrderList().getArraylist().size());
+        Node[] nodes = new Node[business.getOrderList().getArraylist().size()];
         int i = 0;
         for (i = 0; i < nodes.length; i++) {
             try {
@@ -81,9 +94,9 @@ public class Controller implements Initializable {
                 Label name = (Label) p.lookup("#UserName");
                 Label time = (Label) p.lookup("#Time");
                 Button active = (Button) p.lookup("#Active");
-                id.setText("" + customer.getOrderList().getArraylist().get(i).getOrderID());
-                name.setText("" + customer.getOrderList().getArraylist().get(i).getCode());
-                time.setText("" + customer.getOrderList().getArraylist().get(i).getGenerateTime());
+                id.setText("" + business.getOrderList().getArraylist().get(i).getOrderID());
+                name.setText("" + business.getOrderList().getArraylist().get(i).getCode());
+                time.setText("" + business.getOrderList().getArraylist().get(i).getGenerateTime());
 
                 //give the items some effect
                 nodes[i].setOnMouseEntered(event -> {
@@ -94,7 +107,7 @@ public class Controller implements Initializable {
                 });
                 pnItems.getChildren().add(nodes[i]);
 
-                //System.out.println(customer.getOrderList().Getter().get(i).getOrderID());
+                //System.out.println(customer.getOrderList().getArraylist().get(i).getOrderID());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -116,14 +129,14 @@ public class Controller implements Initializable {
             pnlOverview.setStyle("-fx-background-color : #02030A");
             pnlOverview.toFront();
             //setOnAction
-            Label totalOrders = (Label)pnlOverview.lookup("#TotalOrders");
-            totalOrders.setText("" + customer.getOrderList().getArraylist().size());
-
-            Label totalAmount = (Label)pnlOverview.lookup("#TotalAmount");
-            totalAmount.setText("" + customer.getOrderList().getArraylist().size());
-
-            Label todayOrders = (Label)pnlOverview.lookup("#TodayOrders");
-            todayOrders.setText("" + customer.getOrderList().getArraylist().size());
+//            Label totalOrders = (Label)pnlOverview.lookup("#TotalOrders");
+//            totalOrders.setText("" + customer.getOrderList().getArraylist().size());
+//
+//            Label totalAmount = (Label)pnlOverview.lookup("#TotalAmount");
+//            totalAmount.setText("" + customer.getOrderList().getArraylist().size());
+//
+//            Label todayOrders = (Label)pnlOverview.lookup("#TodayOrders");
+//            todayOrders.setText("" + customer.getOrderList().getArraylist().size());
         }
         if(actionEvent.getSource()==btnOrders)
         {
@@ -144,30 +157,34 @@ public class Controller implements Initializable {
                 pnlRestaurant.getChildren().add(nodes[0]);
 
                 TextField tf = (TextField) pnlRestaurant.lookup("#RestName");
-                tf.setText(customer.getRest().getRestName());
+                tf.setText(business.getRest().getRestName());
                 tf.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        customer.getRest().setRestName(tf.getText().trim());
+                        business.getRest().setRestName(tf.getText().trim());
                     }
                 });
 
                 ScrollPane sp = (ScrollPane) pnlRestaurant.lookup("#RestIntro");
                 TextArea ta = (TextArea) sp.contentProperty().getValue();
-                ta.setText(customer.getRest().getRestIntro());
+                ta.setText(business.getRest().getRestIntro());
 
                 Button ok = (Button) pnlRestaurant.lookup("#OK");
                 ok.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
                         //System.out.println(ta.getText());
-                        customer.getRest().setRestIntro(ta.getText());
-                        new SaveRestInfo(customer.getRest());
+                        business.getRest().setRestIntro(ta.getText());
+                        new SaveRestInfo(business.getRest());
                     }
                 });
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+        }
+        if(actionEvent.getSource()==btnMenus)
+        {
 
         }
     }
