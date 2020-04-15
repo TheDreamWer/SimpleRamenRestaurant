@@ -7,7 +7,7 @@ public class FillOrderList {
     private OrderList list= new OrderList();
 
     public FillOrderList(){
-        File csv = new File("src/entities/OrderList.csv");
+        File csv = new File("src/data/OrderList.csv");
         Order temp = new Order();   //建一个空的order
         temp.setOrderID(Long.MAX_VALUE);    //设置不重复ID来保证第一个order不会和空的order相同Id
         Ramen temp_r = new Ramen();

@@ -1,9 +1,13 @@
 package control;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import boundary.*;
@@ -12,14 +16,14 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    private Stage primaryStage;
+    private static Stage primaryStage;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
 //        primaryStage.initStyle(StageStyle.UNDECORATED);
-        this.primaryStage = primaryStage;
-        //showLoginView();
-        showDashboard();
+        primaryStage = stage;
+        showLoginView();
+        //showDashboard();
     }
 
     public void showLoginView() {
@@ -31,16 +35,25 @@ public class Main extends Application {
             LoginViewController loginViewController = loader.getController();
             primaryStage.setScene(new Scene(root, 1280, 800));
             primaryStage.show();
-            
             // 传递主函数
-            System.out.println(loginViewController);
+            //System.out.println(loginViewController);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public static void setPrimaryStage(Stage stage) {
+        primaryStage = stage;
+    }
+
     public void showDashboard() {
+        Stage primaryStage = new Stage();
         try {
             // 载入登录页面
             FXMLLoader loader = new FXMLLoader();
@@ -51,20 +64,11 @@ public class Main extends Application {
             primaryStage.show();
 
             // 传递主函数
-            System.out.println(DashboardController);
+            //System.out.println(DashboardController);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-
-    public Stage getPrimaryStage() {
-        return primaryStage;
-    }
-
-    public void setPrimaryStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
     }
 
     public static void main(String[] args) {

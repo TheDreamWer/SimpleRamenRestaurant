@@ -27,7 +27,7 @@ public class Ticket implements Serializable{
 
     public void printTicket() { //--------------还需要修改------------   
         try {
-			File fl = new File("data/ticket.txt");
+			File fl = new File("src/data/ticket.txt");
             FileWriter fw = new FileWriter(fl);
             BufferedWriter bw = new BufferedWriter(fw);
             String titleline = 

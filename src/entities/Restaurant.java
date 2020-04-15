@@ -12,6 +12,9 @@ public class Restaurant {
 	private int restID;
 	private String name; 
 	private String intro;
+	private String postal;
+	private String address;
+	private String registrationDate;
 	
 	public void setRestID(int num) {
 		this.restID=num;
@@ -36,7 +39,30 @@ public class Restaurant {
 	public String getRestIntro() {
 		return this.intro;
 	}
-	
+
+    public String getRestPostalcode() {
+		return this.postal;
+    }
+
+	public String getRestAddress() {
+		return this.address;
+	}
+
+	public String getRestRegistrationDate() {
+		return this.registrationDate;
+	}
+
+	public void setRestPostalcode(String postalcode) {
+		this.postal = postalcode;
+	}
+
+	public void setRestAddress(String address) {
+		this.address = address;
+	}
+
+	public void setRestRegistrationDate(String registrationDate) {
+		this.registrationDate = registrationDate;
+	}
 }
 
 /****************All copy right reserved by group 105*********************/

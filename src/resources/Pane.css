@@ -1,4 +1,4 @@
-#btnAddToCart
+#addcart
 {
     -fx-background-color: rgba(238, 83, 0, 0.55);
     -fx-text-fill : rgba(41, 0, 18, 0.96);
@@ -17,7 +17,7 @@ AnchorPane {
     -fx-background-radius: 6px;
 }
 
-#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA{
+#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA,#addNori,#subNori,#addChashu,#subChashu,#addBoiledEgg,#subBoiledEgg,#addBambooShoot,#subBambooShoot{
     -fx-background-color : transparent;
     -fx-text-fill : #000000;
     -fx-background-image:url("./images/button_back.png") ;

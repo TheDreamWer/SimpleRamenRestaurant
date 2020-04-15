@@ -22,7 +22,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Button fx:id="btnAddToCart" layoutX="294.0" layoutY="509.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" text="Add to cart">
+      <Button id="addcart" fx:id="btnAddToCart" layoutX="294.0" layoutY="509.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" text="Add to cart">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -213,7 +213,7 @@
                               <Insets left="5.0" top="10.0" />
                            </HBox.margin>
                         </RadioButton>
-                        <RadioButton id="NoriYes" fx:id="btnChashuYes" mnemonicParsing="false" text="Yes">
+                        <RadioButton id="chashuYes" fx:id="btnChashuYes" mnemonicParsing="false" text="Yes">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -240,7 +240,7 @@
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton id="NoriNo" fx:id="btnEggNo" mnemonicParsing="false" selected="true" text="No">
+                  <RadioButton id="BoiledEggNo" fx:id="btnEggNo" mnemonicParsing="false" selected="true" text="No">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -248,7 +248,7 @@
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton id="NoriYes" fx:id="btnEggYes" mnemonicParsing="false" text="Yes">
+                  <RadioButton id="BoiledEggYes" fx:id="btnEggYes" mnemonicParsing="false" text="Yes">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -273,7 +273,7 @@
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton id="SpicNo" fx:id="btnSpic0" mnemonicParsing="false" selected="true" text="0 (No)">
+                  <RadioButton id="Spic0" fx:id="btnSpic0" mnemonicParsing="false" selected="true" text="0 (No)">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -343,7 +343,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button id="btnExNoriD" fx:id="btnExNoriD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button id="subNori" fx:id="btnExNoriD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -354,7 +354,7 @@
                   <Insets left="18.0" top="15.0" />
                </padding>
             </Button>
-            <Label text="0">
+            <Label id="ExtraNori" text="0">
                <HBox.margin>
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
@@ -362,7 +362,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button id="btnExNoriA" fx:id="btnExNoriA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button id="addNori" fx:id="btnExNoriA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -393,7 +393,7 @@
                   <Insets top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnExEggD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button id="subBoiledEgg" fx:id="btnExEggD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -404,7 +404,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Label text="0">
+            <Label id="ExtraBoiledEgg" text="0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -412,7 +412,7 @@
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnExEggA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button id="addBoiledEgg" fx:id="btnExEggA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
@@ -443,7 +443,7 @@
                   <Insets top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnBamD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button id="subBambooShoot" fx:id="btnBamD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -454,7 +454,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Label text="0">
+            <Label id="BambooShoots" text="0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -462,7 +462,7 @@
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnBamA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button id="addBambooShoot" fx:id="btnBamA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
@@ -493,7 +493,7 @@
                   <Insets top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnExChaD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button id="subChashu" fx:id="btnExChaD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -504,7 +504,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Label text="0">
+            <Label id="ExtraChashu" text="0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -512,7 +512,7 @@
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btnExChaA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button id="addChashu" fx:id="btnExChaA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
@@ -525,5 +525,6 @@
             </Button>
          </children>
       </HBox>
+      <Label id="Amount" layoutX="81.0" layoutY="501.0" prefHeight="42.0" prefWidth="126.0" text="Amount" />
    </children>
 </AnchorPane>

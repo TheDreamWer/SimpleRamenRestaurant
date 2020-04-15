@@ -41,6 +41,9 @@ public class FillRestInfo {
 						r.setRestID(restid);
 						r.setRestName(splitstr[1]);
 						r.setRestIntro(splitstr[2].replace("`+`", "\n"));
+						r.setRestAddress(splitstr[3]);
+						r.setRestPostalcode(splitstr[4]);
+						r.setRestRegistrationDate(splitstr[5]);
 					}
 				}
 				br.close();

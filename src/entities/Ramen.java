@@ -119,4 +119,8 @@ public class Ramen implements Serializable {
     public void setExtra_chashu(int extra_chashu) {
         this.extra_chashu = extra_chashu;
     }
+
+    public float calcRamenAmount() {
+        return 0;
+    }
 }
