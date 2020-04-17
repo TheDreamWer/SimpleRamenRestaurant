@@ -39,6 +39,7 @@ public class FillOrderList {
                 temp_r.setExtra_boiled_egg(Integer.parseInt(item[13]));
                 temp_r.setBamboo_shoots(Integer.parseInt(item[14]));
                 temp_r.setExtra_chashu(Integer.parseInt(item[15]));
+                temp_r.setNum(Integer.parseInt(item[16]));
 
                 temp.getRamenList().add(temp_r);
             }

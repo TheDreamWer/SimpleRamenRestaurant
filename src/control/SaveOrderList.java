@@ -35,7 +35,8 @@ public class SaveOrderList {
                 bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_nori())+",");
                 bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_boiled_egg())+",");
                 bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getBamboo_shoots())+",");
-                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_chashu())+"\r\n");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getExtra_chashu())+",");
+                bw.write(String.valueOf(list.getArraylist().get(i).getRamen(j).getNum())+"\r\n");
             }
         }
 
