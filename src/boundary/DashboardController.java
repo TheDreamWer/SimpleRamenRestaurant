@@ -65,11 +65,10 @@ public class DashboardController implements Initializable{
             pnlRamen.getChildren().add(nodes[0]);
 
             Label Amount = (Label) pnlRamen.lookup("#Amount");
-            Amount.setText("20");
+            Amount.setText("£9.9");
             //初始化Ramen
             ArrayList<Ramen> tempRamen = new ArrayList<Ramen>();
             tempRamen.add(new Ramen());
-            tempRamen.get(tempRamen.size()-1).setOnion_level(-1);
 
             //额外的Nori 增减部分
             Label ExtraNori = (Label) pnlRamen.lookup("#ExtraNori");
@@ -80,8 +79,8 @@ public class DashboardController implements Initializable{
                 public void handle(ActionEvent event) {
                     if (!ExtraNori.getText().equals("100")) {
                         ExtraNori.setText(String.valueOf(Integer.parseInt(ExtraNori.getText())+1));
-                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
                         tempRamen.get(tempRamen.size()-1).setExtra_nori(Integer.parseInt(ExtraNori.getText())+1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                     }
                 }
             });
@@ -90,10 +89,11 @@ public class DashboardController implements Initializable{
             subNori.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    if (!ExtraNori.getText().equals("0"))
+                    if (!ExtraNori.getText().equals("0")) {
                         ExtraNori.setText(String.valueOf(Integer.parseInt(ExtraNori.getText())-1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())-1));
-                    tempRamen.get(tempRamen.size()-1).setExtra_nori(Integer.parseInt(ExtraNori.getText())-1);
+                        tempRamen.get(tempRamen.size()-1).setExtra_nori(Integer.parseInt(ExtraNori.getText())-1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
+                    }
                 }
             });
 
@@ -106,8 +106,8 @@ public class DashboardController implements Initializable{
                 public void handle(ActionEvent event) {
                     if (!ExtraChashu.getText().equals("100")) {
                         ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())+2));
-                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+2));
                         tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())+2);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                     }
                 }
             });
@@ -116,9 +116,11 @@ public class DashboardController implements Initializable{
             subChashu.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    if (!ExtraChashu.getText().equals("0"))
-                        ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())-2));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())-2));
+                    if (!ExtraChashu.getText().equals("0")) {
+                        ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())-1));
+                        tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())-1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
+                    }
                 }
             });
 
@@ -131,8 +133,8 @@ public class DashboardController implements Initializable{
                 public void handle(ActionEvent event) {
                     if (!ExtraBoiledEgg.getText().equals("100")) {
                         ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())+1));
-                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
                         tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())+1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                     }
                 }
             });
@@ -141,10 +143,11 @@ public class DashboardController implements Initializable{
             subBoiledEgg.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    if (!ExtraBoiledEgg.getText().equals("0"))
+                    if (!ExtraBoiledEgg.getText().equals("0")) {
                         ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())-1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())-1));
-                    tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())-1);
+                        tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())-1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
+                    }
                 }
             });
 
@@ -156,8 +159,8 @@ public class DashboardController implements Initializable{
                 public void handle(ActionEvent event) {
                     if (!BambooShoots.getText().equals("100")) {
                         BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())+1));
-                        Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())+1));
                         tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())+1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                     }
                 }
             });
@@ -165,10 +168,11 @@ public class DashboardController implements Initializable{
             subBambooShoot.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    if (!BambooShoots.getText().equals("0"))
+                    if (!BambooShoots.getText().equals("0")) {
                         BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())-1));
-                    Amount.setText(String.valueOf(Integer.parseInt(Amount.getText())-1));
-                    tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())-1);
+                        tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())-1);
+                        Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
+                    }
                 }
             });
 
@@ -187,21 +191,6 @@ public class DashboardController implements Initializable{
                 public void changed(ObservableValue<? extends Toggle> changed,
                                     Toggle oldVal, Toggle newVal) {
                     if (groupSoup.getSelectedToggle() != null) {
-//                        if (groupSoup.getSelectedToggle().getUserData().toString().equals("Tonkotsu")){
-//                            Tonkotsu.setSelected(true);
-//                            Shoyu.setSelected(false);
-//                            Shio.setSelected(false);
-//                        }
-//                        else if(groupSoup.getSelectedToggle().getUserData().toString().equals("Shoyu")){
-//                            Tonkotsu.setSelected(false);
-//                            Shoyu.setSelected(true);
-//                            Shio.setSelected(false);
-//                        }
-//                        else{
-//                            Tonkotsu.setSelected(false);
-//                            Shoyu.setSelected(false);
-//                            Shio.setSelected(true);
-//                        }
                         tempRamen.get(tempRamen.size()-1).setSoup(groupSoup.getSelectedToggle().getUserData().toString());
                     }
                 }
@@ -274,6 +263,8 @@ public class DashboardController implements Initializable{
                             addNori.setDisable(true);
                             subNori.setDisable(true);
                             tempRamen.get(tempRamen.size()-1).setNori(false);
+                            tempRamen.get(tempRamen.size()-1).setExtra_nori(0);         //如果选no将数量清零
+                            ExtraNori.setText("0");
                         }
                     }
                 }
@@ -300,6 +291,8 @@ public class DashboardController implements Initializable{
                             addChashu.setDisable(true);
                             subChashu.setDisable(true);
                             tempRamen.get(tempRamen.size()-1).setChashu(false);
+                            tempRamen.get(tempRamen.size()-1).setExtra_chashu(0);
+                            ExtraChashu.setText("0");
                         }
                     }
                 }
@@ -326,6 +319,8 @@ public class DashboardController implements Initializable{
                             addBoiledEgg.setDisable(true);
                             subBoiledEgg.setDisable(true);
                             tempRamen.get(tempRamen.size()-1).setBoiled_egg(false);
+                            tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(0);
+                            ExtraBoiledEgg.setText("0");
                         }
                     }
                 }
@@ -335,7 +330,7 @@ public class DashboardController implements Initializable{
             ToggleGroup groupSpiciness = new ToggleGroup();
             RadioButton[] rSpiciness = new RadioButton[6];
             for (int i=0;i<6;i++) {
-                rSpiciness[i] = (RadioButton) pnlRamen.lookup("#Spic"+i);       //Radiobutton的id需为Spiciness加后缀1～5
+                rSpiciness[i] = (RadioButton) pnlRamen.lookup("#Spic"+i);       //Radiobutton的id需为Spic加后缀0～5
                 rSpiciness[i].setToggleGroup(groupSpiciness);
                 rSpiciness[i].setUserData(""+i);
             }
@@ -348,22 +343,19 @@ public class DashboardController implements Initializable{
                     }
                 }
             });
+
             //添加购物车
             Button addCart = (Button) pnlRamen.lookup("#addcart");
             addCart.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
-                    if ((!tempRamen.get(tempRamen.size()-1).getSoup().isEmpty())
-                            &&(!tempRamen.get(tempRamen.size()-1).getNoodles().isEmpty())
-                            &&tempRamen.get(tempRamen.size()-1).getOnion_level()!=-1) {
-                        customer.getDraft().getRamenList().add(tempRamen.get(tempRamen.size()-1));
-                        //System.out.println(tempRamen.get(tempRamen.size()-1));
-                        customer.getDraft().setOrderAmount(customer.getDraft().getOrderAmount()
-                                + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
-                        tempRamen.add(new Ramen());
-                        Ticket ticket = new Ticket(customer.getDraft());
-                        ticket.printTicket();
-                    }
+                    customer.getDraft().getRamenList().add(tempRamen.get(tempRamen.size()-1));
+                    //System.out.println(tempRamen.get(tempRamen.size()-1));
+                    customer.getDraft().setOrderAmount(customer.getDraft().getOrderAmount()
+                            + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
+                    tempRamen.add(new Ramen());
+                    Ticket ticket = new Ticket(customer.getDraft());
+                    ticket.printTicket();
                 }
             });
 
