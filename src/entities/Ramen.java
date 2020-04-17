@@ -17,11 +17,17 @@ public class Ramen implements Serializable {
     private Boolean chashu = false;
     private Boolean boiled_egg = false;
     private int spiciness = 0;//0:no,1,2,3,4,5(max)
+    public int ramenNumber = 1; //这种面的数量
 
     private int extra_nori = 0;//多加多少紫菜，默认0，可以1-10或者1-99，99非常能吃
     private int extra_boiled_egg = 0;//多加多少鸡蛋
     private int Bamboo_shoots = 0;//多加多少竹笋
     private int extra_chashu= 0;//多加多少叉烧
+
+    private float noriPrice = 1f;  //add-on的单价
+    private float boiledEggPrice = 1f;
+    private float bambooShootPrice = 1f;
+    private float chashuPrice = 2f;
 
     //Constructor
     // public Ramen() {
@@ -56,6 +62,8 @@ public class Ramen implements Serializable {
     public int getSpiciness() {
         return spiciness;
     }
+
+    public int getNum() { return this.ramenNumber; }
 
     //get methods for add-ons
     public int getExtra_nori() {
@@ -103,6 +111,10 @@ public class Ramen implements Serializable {
         this.spiciness = spiciness;
     }
 
+    public void setNum(int ramenNumber) {
+        this.ramenNumber = ramenNumber;
+    }
+
     //add-ons
     public void setExtra_nori(int extra_nori) {
         this.extra_nori = extra_nori;
@@ -120,7 +132,45 @@ public class Ramen implements Serializable {
         this.extra_chashu = extra_chashu;
     }
 
+    //add-on Amount
+    public void setNoriPrice(float noriPrice) {
+        this.noriPrice = noriPrice;
+    }
+
+    public void setChashuPrice(float chashuPrice) {
+        this.chashuPrice = chashuPrice;
+    }
+
+    public void setBoiledEggPrice(float boiledEggPrice) {
+        this.boiledEggPrice = boiledEggPrice;
+    }
+
+    public void setBambooShootPrice(float bambooShootPrice) {
+        this.bambooShootPrice = bambooShootPrice;
+    }
+
+    public float getNoriAmount() {
+        return this.noriPrice * this.extra_nori;
+    }
+
+    public float getBoiledEggAmount() {
+        return this.boiledEggPrice * this.extra_boiled_egg;
+    }
+
+    public float getChashuAmount() {
+        return this.chashuPrice * this.extra_chashu;
+    }
+
+    public float getBambooShootAmount() {
+        return this.bambooShootPrice * this.Bamboo_shoots;
+    }
+
     public float calcRamenAmount() {
-        return 0;
+        float RamenAmount = 9.9f;
+        RamenAmount += this.getNoriAmount();
+        RamenAmount += this.getBoiledEggAmount();
+        RamenAmount += this.getBambooShootAmount();
+        RamenAmount += this.getChashuAmount();
+        return RamenAmount;
     }
 }
