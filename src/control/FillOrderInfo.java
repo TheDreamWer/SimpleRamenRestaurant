@@ -55,16 +55,12 @@ public class FillOrderInfo{
         Ramen ramen;
         for(int i=0; i<ramenList.size(); i++){
             ramen = (Ramen) ramenList.get(i);
-            order_amount += 9.9;
-            order_amount += ramen.getExtra_nori();
-            order_amount += ramen.getExtra_boiled_egg();
-            order_amount += ramen.getExtra_chashu() * 2.;
-            order_amount += ramen.getBamboo_shoots();
+            order_amount += ramen.getNum()*ramen.calcRamenAmount();
         }
 
         return order_amount;
     }
-    
+
     public float calcRamenAmount(Ramen ramen){
         float amount = 9.9;
         amount += ramen.getExtra_nori();
