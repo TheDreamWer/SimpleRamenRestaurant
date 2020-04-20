@@ -9,15 +9,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.PersonalInfo">
+<AnchorPane fx:id="InfoPnl" prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.PersonalInfo">
    <children>
-      <Button id="btnCancel" fx:id="btnCancel" cancelButton="true" layoutX="250.0" layoutY="418.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
+      <Button id="btnCancel" fx:id="btnCancel" cancelButton="true" layoutX="383.0" layoutY="384.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button id="btnOK" fx:id="btnOK" cancelButton="true" layoutX="451.0" layoutY="418.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
+      <Button id="btnOK" fx:id="btnOK" cancelButton="true" layoutX="544.0" layoutY="384.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
          <font>
             <Font size="16.0" />
          </font>

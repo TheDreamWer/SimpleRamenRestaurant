@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="StampPnl" prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.StampController">
+   <children>
+      <Label fx:id="StampLab" layoutX="337.0" layoutY="192.0" prefHeight="77.0" prefWidth="185.0" text="21" textFill="#fffffff5">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -10,28 +10,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.RamenController">
+<AnchorPane fx:id="RamenPnl" prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kernel.views.RamenController">
    <children>
-      <Label layoutX="36.0" layoutY="17.0" text="Personalize Ramen">
+      <Label layoutX="39.0" layoutY="20.0" text="Personalize Ramen">
          <font>
-            <Font size="26.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="36.0" layoutY="323.0" text="Add-ons">
+      <Label fx:id="AmonutLabel" layoutX="267.0" layoutY="495.0" text="Amount：￡9.99">
          <font>
-            <Font size="26.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Button id="addcart" fx:id="btnAddToCart" layoutX="294.0" layoutY="509.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" text="Add to cart">
+      <Label layoutX="49.0" layoutY="347.0" text="Add-ons">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAddToCart" layoutX="521.0" layoutY="489.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="166.0" text="Add to cart">
+         <font>
+            <Font size="22.0" />
          </font>
       </Button>
-      <VBox layoutX="77.0" layoutY="56.0" prefHeight="70.0" prefWidth="640.0">
+      <VBox layoutX="87.0" layoutY="53.0" prefHeight="294.0" prefWidth="686.0">
          <children>
             <HBox prefHeight="45.0" prefWidth="566.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/Soup_icon.png" />
                      </image>
@@ -63,7 +68,7 @@
                         <Insets />
                      </opaqueInsets>
                      <HBox.margin>
-                        <Insets left="10.0" top="10.0" />
+                        <Insets left="20.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                   <RadioButton id="Shio" fx:id="btnShio" mnemonicParsing="false" text="Shio">
@@ -71,14 +76,14 @@
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="41.0" top="10.0" />
+                        <Insets left="61.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                </children>
             </HBox>
             <HBox prefHeight="45.0" prefWidth="566.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/Ramen_icon2.png" />
                      </image>
@@ -104,7 +109,7 @@
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="61.0" top="10.0" />
+                        <Insets left="71.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                   <RadioButton id="NoodleFirm" fx:id="btnFirm" mnemonicParsing="false" text="Firm">
@@ -112,14 +117,14 @@
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="40.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                </children>
             </HBox>
             <HBox prefHeight="45.0" prefWidth="566.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/Onion_icon.png" />
                      </image>
@@ -144,90 +149,86 @@
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="71.0" top="10.0" />
+                        <Insets left="81.0" top="10.0" />
                      </HBox.margin></RadioButton>
                   <RadioButton id="OnionLot" fx:id="btnLot" mnemonicParsing="false" text="A Lot">
                      <font>
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="32.0" top="10.0" />
+                        <Insets left="54.0" top="10.0" />
                      </HBox.margin></RadioButton>
-               </children>
-            </HBox>
-            <HBox prefHeight="45.0" prefWidth="200.0">
-               <children>
-                  <HBox prefHeight="45.0" prefWidth="354.0">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/images/Nori_icon.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Nori: ">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="5.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton id="NoriNo" fx:id="btnNoriNo" mnemonicParsing="false" selected="true" text="No">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton id="NoriYes" fx:id="btnNoriYes" mnemonicParsing="false" text="Yes">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="26.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="45.0" prefWidth="357.0">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/images/Chashu_icon.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Chashu:  ">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="5.0" top="10.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton id="chashuNo" fx:id="btnChashuiNo" mnemonicParsing="false" selected="true" text="No">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="5.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <RadioButton id="chashuYes" fx:id="btnChashuYes" mnemonicParsing="false" text="Yes">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="25.0" top="10.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                     </children>
-                  </HBox>
                </children>
             </HBox>
             <HBox prefHeight="45.0" prefWidth="354.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/Nori_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Nori: ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton id="NoriNo" fx:id="btnNoriNo" mnemonicParsing="false" selected="true" text="No">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="88.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton id="NoriYes" fx:id="btnNoriYes" mnemonicParsing="false" text="Yes">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="82.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="357.0">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/Chashu_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Chashu:  ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton id="NoriNo" fx:id="btnChashuiNo" mnemonicParsing="false" selected="true" text="No">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="53.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton id="NoriYes" fx:id="btnChashuYes" mnemonicParsing="false" text="Yes">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="82.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="354.0">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/Egg_icon.png" />
                      </image>
@@ -240,27 +241,27 @@
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton id="BoiledEggNo" fx:id="btnEggNo" mnemonicParsing="false" selected="true" text="No">
+                  <RadioButton id="NoriNo" fx:id="btnEggNo" mnemonicParsing="false" selected="true" text="No">
                      <font>
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="10.0" top="10.0" />
+                        <Insets left="27.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
-                  <RadioButton id="BoiledEggYes" fx:id="btnEggYes" mnemonicParsing="false" text="Yes">
+                  <RadioButton id="NoriYes" fx:id="btnEggYes" mnemonicParsing="false" text="Yes">
                      <font>
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="25.0" top="10.0" />
+                        <Insets left="82.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                </children>
             </HBox>
             <HBox prefHeight="45.0" prefWidth="566.0">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/images/Spiciness_icon.png" />
                      </image>
@@ -273,12 +274,12 @@
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton id="Spic0" fx:id="btnSpic0" mnemonicParsing="false" selected="true" text="0 (No)">
+                  <RadioButton id="SpicNo" fx:id="btnSpic0" mnemonicParsing="false" selected="true" text="0 (No)">
                      <font>
                         <Font size="20.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="5.0" top="10.0" />
+                        <Insets left="37.0" top="10.0" />
                      </HBox.margin>
                   </RadioButton>
                   <RadioButton id="Spic1" fx:id="btnSpic1" mnemonicParsing="false" text="1">
@@ -325,9 +326,9 @@
             </HBox>
          </children>
       </VBox>
-      <HBox layoutX="77.0" layoutY="351.0" prefHeight="53.0" prefWidth="279.0">
+      <HBox layoutX="87.0" layoutY="372.0" prefHeight="53.0" prefWidth="279.0">
          <children>
-            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/images/Nori_icon.png" />
                </image>
@@ -343,7 +344,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button id="subNori" fx:id="btnExNoriD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button id="btnExNoriD" fx:id="btnExNoriD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -354,7 +355,7 @@
                   <Insets left="18.0" top="15.0" />
                </padding>
             </Button>
-            <Label id="ExtraNori" text="0">
+            <Label text="0">
                <HBox.margin>
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
@@ -362,7 +363,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button id="addNori" fx:id="btnExNoriA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button id="btnExNoriA" fx:id="btnExNoriA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -375,9 +376,9 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="77.0" layoutY="438.0" prefHeight="53.0" prefWidth="360.0">
+      <HBox layoutX="412.0" layoutY="372.0" prefHeight="53.0" prefWidth="360.0">
          <children>
-            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/images/Egg_icon.png" />
                </image>
@@ -393,7 +394,7 @@
                   <Insets top="16.0" />
                </HBox.margin>
             </Label>
-            <Button id="subBoiledEgg" fx:id="btnExEggD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button fx:id="btnExEggD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -404,7 +405,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Label id="ExtraBoiledEgg" text="0">
+            <Label text="0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -412,7 +413,7 @@
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
             </Label>
-            <Button id="addBoiledEgg" fx:id="btnExEggA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button fx:id="btnExEggA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
@@ -425,59 +426,9 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="77.0" layoutY="393.0" prefHeight="53.0" prefWidth="341.0">
+      <HBox layoutX="87.0" layoutY="418.0" prefHeight="53.0" prefWidth="330.0">
          <children>
-            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/images/Bamboo_icon.png" />
-               </image>
-               <HBox.margin>
-                  <Insets top="6.0" />
-               </HBox.margin>
-            </ImageView>
-            <Label text="Bamboo shoots">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets top="16.0" />
-               </HBox.margin>
-            </Label>
-            <Button id="subBambooShoot" fx:id="btnBamD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <padding>
-                  <Insets left="18.0" top="15.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Button>
-            <Label id="BambooShoots" text="0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="20.0" top="16.0" />
-               </HBox.margin>
-            </Label>
-            <Button id="addBambooShoot" fx:id="btnBamA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <padding>
-                  <Insets left="18.0" top="15.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-      <HBox layoutX="397.0" layoutY="351.0" prefHeight="53.0" prefWidth="330.0">
-         <children>
-            <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/images/Chashu_icon.png" />
                </image>
@@ -493,7 +444,7 @@
                   <Insets top="16.0" />
                </HBox.margin>
             </Label>
-            <Button id="subChashu" fx:id="btnExChaD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+            <Button fx:id="btnExChaD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
                <font>
                   <Font size="20.0" />
                </font>
@@ -504,7 +455,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Label id="ExtraChashu" text="0">
+            <Label text="0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -512,7 +463,7 @@
                   <Insets left="20.0" top="16.0" />
                </HBox.margin>
             </Label>
-            <Button id="addChashu" fx:id="btnExChaA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+            <Button fx:id="btnExChaA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
                <font>
                   <Font size="20.0" />
                </font>
@@ -525,6 +476,55 @@
             </Button>
          </children>
       </HBox>
-      <Label id="Amount" layoutX="81.0" layoutY="501.0" prefHeight="42.0" prefWidth="126.0" text="Amount" />
+      <HBox layoutX="417.0" layoutY="418.0" prefHeight="53.0" prefWidth="341.0">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/Bamboo_icon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="6.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Bamboo shoots">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="16.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="btnBamD" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" stylesheets="@../resources/Pane.css" text="-">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="18.0" top="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Label text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="16.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="btnBamA" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="+">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="18.0" top="15.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
