@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 public class PaymentController implements Initializable {
     private Customer customer;
 
-    //private RadioButton[3] payment;// 还没有定义
+    private RadioButton[3] payment;// 还没有定义
 
     private Button finish;
 
@@ -39,29 +39,38 @@ public class PaymentController implements Initializable {
         return customer;
     }
 
-
     //    @Override
     public void initialize(URL location, ResourceBundle resources) {
+        ButtonGroup paymentGroup;
+        paymentGroup.add(payment[0]);
+        paymentGroup.add(payment[1]);
+        paymentGroup.add(payment[2]);
     }
-
-
-//    public void handleClicks(ActionEvent actionEvent) {
-//        if (actionEvent.getSource() == payment[0]) {
-//            String paymentString = payment[0].getSource();
-//            this.customer.getDraft().setPaymentMethod();
-//        }
-//        if (actionEvent.getSource() == payment[1]) {
-//            String paymentString = payment[1].getSource();
-//            this.customer.getDraft().setPaymentMethod();
-//        }
-//        if (actionEvent.getSource() == payment[2]) {
-//            String paymentString = payment[2].getSource();
-//            this.customer.getDraft().setPaymentMethod();
-//        }
-//        if (actionEvent.getSource() == finish) {
-//            this.customer.formOrder();
-//        }
-//
-//
-//    }
+    
+    public void handleClicks(ActionEvent actionEvent) {
+        int judge = 0;
+        if (actionEvent.getSource() == payment[0]) {
+            String paymentString = payment[0].getSource();
+            this.customer.getDraft().setPaymentMethod();
+            judge = 1;
+        }
+        if (actionEvent.getSource() == payment[1]) {
+            String paymentString = payment[1].getSource();
+            this.customer.getDraft().setPaymentMethod();
+            judge = 1;
+        }
+        if (actionEvent.getSource() == payment[2]) {
+            String paymentString = payment[2].getSource();
+            this.customer.getDraft().setPaymentMethod();
+            judge = 1;
+        }
+        if (actionEvent.getSource() == finish) {
+            if(judge == 1){
+                this.customer.formOrder();
+            }
+            else{
+                // notic uesr to select the payment method
+            }
+        }
+   }
 }
