@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="InfoPnl" prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="btnCancel" fx:id="btnCancel" cancelButton="true" layoutX="383.0" layoutY="384.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button id="btnOK" fx:id="btnOK" cancelButton="true" layoutX="544.0" layoutY="384.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="OK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="51.0" layoutY="40.0" text="Personal Information">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="174.0" layoutY="99.0" minHeight="256.0" prefHeight="256.0" prefWidth="460.0" style="-fx-background-color: transparent;" vgap="5.0">
+         <children>
+            <Label text="User ID:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="User Name: " GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Phone Number:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Email Address: " textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="Tset_User" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="PhoneField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="123456789" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="EmailField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="xxx@xx.com" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label fx:id="labUserID" prefHeight="32.0" prefWidth="352.0" text="不可改的user ID" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="402.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="82.0" minHeight="0.0" prefHeight="63.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

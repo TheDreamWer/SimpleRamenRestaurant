@@ -1,0 +1,44 @@
+#btnSignOut,#btnStamp,#btnRamen,#btnPersonalInfo,#btnCart
+{
+-fx-background-color : transparent;
+-fx-text-fill : #000000;
+}
+
+#btnSignOut:hover{
+     -fx-background-color : rgba(215, 133, 110, 0.58);
+ }
+#btnStamp:hover{
+    -fx-background-color : rgba(215, 133, 110, 0.58);
+}
+#btnRamen:hover{
+    -fx-background-color : rgba(215, 133, 110, 0.58);
+}
+#btnPersonalInfo:hover{
+    -fx-background-color : rgba(215, 133, 110, 0.58);
+}
+#btnCart:hover{
+    -fx-background-color : rgba(215, 133, 110, 0.58);
+}
+
+#btnSignOut:pressed {
+-fx-background-color : rgba(239, 202, 183, 0.45);
+}
+#btnStamp:pressed {
+    -fx-background-color : rgba(239, 202, 183, 0.45);
+}
+#btnRamen:pressed {
+    -fx-background-color : rgba(239, 202, 183, 0.45);
+}
+#btnPersonalInfo:pressed {
+    -fx-background-color : rgba(239, 202, 183, 0.45);
+}
+#btnCart:pressed {
+    -fx-background-color : rgba(239, 202, 183, 0.45);
+}
+
+#vBoxButton{
+    -fx-background-color: rgba(245, 245, 245, 0.51);
+    -fx-background-image: url("../resources/images/DashboardButton1.png");
+    -fx-background-size: 256px 576px;
+    -fx-background-radius: 6px;
+}
