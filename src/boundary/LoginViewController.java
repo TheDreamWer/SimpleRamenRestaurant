@@ -28,6 +28,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 public class LoginViewController implements Initializable{
     private Customer customer = new Customer(1);
@@ -81,13 +82,49 @@ public class LoginViewController implements Initializable{
         PostalLab.setText("Postal code:\t" + customer.getRest().getRestPostalcode());
         DateLab.setText("Registration Date:\t" + customer.getRest().getRestRegistrationDate());
 
+
         SignInButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                String usrid = usernameField.getText()
+                String pw = passwordField.getText()
+                UserOP uop = new UserOP();
+                if(uop.Login(usrid,pw))
+                {
+                    showDashboard();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "USERID or PASSWORD error!!", "Warning", JOptionPane.ERROR_MESSAGE);
+                }
 //                System.out.println(1);
+
+            }
+        });
+
+        VisitorButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
                 showDashboard();
             }
         });
+
+        SignUpButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+                    
+            //下面这四个SignUp系列TextField是注册需要的，我自己添上去的        
+            String usrname = SignUpUsrname.getText();
+            String passcode = SignUpPassword.getText();
+            String phonenum = SignUpPhoneNum.getText();
+            String mail = SignUpMail.getText();
+
+            GenUser gusr = new GenUser(usrname,passcode,phonenum,mail);
+            User usr = gusr.getUser();
+            String uid = "Your ID is :" + usr.getUserID();
+            JOptionPane.showMessageDialog(null, uid, "Attention");
+        });
+
+
+
     }
 
     public void showDashboard() {
