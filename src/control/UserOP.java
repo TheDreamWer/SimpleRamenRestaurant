@@ -15,6 +15,7 @@ public class UserOP {
 	// Attention: A Logout operation is needed after Login operation
 	// Or You can NEVER be able to Login this user again 
 	public boolean Login(String id, String pw) {
+		boolean checker = false;
 		try {
 			File f = new File("data/Users.csv");
 			if(!f.exists())
@@ -60,15 +61,16 @@ public class UserOP {
 				bw.close();
 				fw.close();
 				System.out.println("Successfully Login User:"+id);
-				return true;
+				checker = true;
 			}
 			else {
-				return false;
+				checker = false;
 			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		return checker;
 		
 	}
 	
