@@ -24,10 +24,10 @@ public class Ramen implements Serializable {
     private int Bamboo_shoots = 0;//多加多少竹笋
     private int extra_chashu= 0;//多加多少叉烧
 
-    private float noriPrice = 1f;  //add-on的单价
-    private float boiledEggPrice = 1f;
-    private float bambooShootPrice = 1f;
-    private float chashuPrice = 2f;
+    private static float NoriPrice = 1f;  //add-on的单价
+    private static float BoiledEggPrice = 1f;
+    private static float BambooShootPrice = 1f;
+    private static float ChashuPrice = 2f;
 
     //Constructor
     // public Ramen() {
@@ -133,36 +133,36 @@ public class Ramen implements Serializable {
     }
 
     //add-on Amount
-    public void setNoriPrice(float noriPrice) {
-        this.noriPrice = noriPrice;
+    public static void setNoriPrice(float noriPrice) {
+        NoriPrice = noriPrice;
     }
 
-    public void setChashuPrice(float chashuPrice) {
-        this.chashuPrice = chashuPrice;
+    public static void setChashuPrice(float chashuPrice) {
+        ChashuPrice = chashuPrice;
     }
 
-    public void setBoiledEggPrice(float boiledEggPrice) {
-        this.boiledEggPrice = boiledEggPrice;
+    public static void setBoiledEggPrice(float boiledEggPrice) {
+        BoiledEggPrice = boiledEggPrice;
     }
 
-    public void setBambooShootPrice(float bambooShootPrice) {
-        this.bambooShootPrice = bambooShootPrice;
+    public static void setBambooShootPrice(float bambooShootPrice) {
+        BambooShootPrice = bambooShootPrice;
     }
 
     public float getNoriAmount() {
-        return this.noriPrice * this.extra_nori;
+        return NoriPrice * this.extra_nori;
     }
 
     public float getBoiledEggAmount() {
-        return this.boiledEggPrice * this.extra_boiled_egg;
+        return BoiledEggPrice * this.extra_boiled_egg;
     }
 
     public float getChashuAmount() {
-        return this.chashuPrice * this.extra_chashu;
+        return ChashuPrice * this.extra_chashu;
     }
 
     public float getBambooShootAmount() {
-        return this.bambooShootPrice * this.Bamboo_shoots;
+        return BambooShootPrice * this.Bamboo_shoots;
     }
 
     public float calcRamenAmount() {
