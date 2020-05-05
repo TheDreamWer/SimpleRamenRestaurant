@@ -10,7 +10,6 @@ public class FillOrderList {
         File csv = new File("src/data/OrderList.csv");
         Order temp = new Order();   //建一个空的order
         temp.setOrderID(Long.MAX_VALUE);    //设置不重复ID来保证第一个order不会和空的order相同Id
-        Ramen temp_r = new Ramen();
 
         try {
             BufferedReader textFile = new BufferedReader(new FileReader(csv));
@@ -28,6 +27,7 @@ public class FillOrderList {
                     temp.setRamenList(new ArrayList<Ramen>());
                     list.getArraylist().add(temp);
                 }
+                Ramen temp_r = new Ramen();
                 temp_r.setSoup(item[5]);
                 temp_r.setNoodles(item[6]);
                 temp_r.setOnion_level(Integer.parseInt(item[7]));
