@@ -60,7 +60,7 @@ public class Main extends Application {
     @Override
     public void stop(){
         // Save Order List
-        this.customer.savaOrderList();
+        this.customer.saveOrderList();
 
         // Save User registed
         // The User information is saved while registration
