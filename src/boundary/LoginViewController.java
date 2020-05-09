@@ -118,9 +118,14 @@ public class LoginViewController implements Initializable{
             String mail = SignUpMail.getText();
 
             GenUser gusr = new GenUser(usrname,passcode,phonenum,mail);
-            User usr = gusr.getUser();
-            String uid = "Your ID is :" + usr.getUserID();
-            JOptionPane.showMessageDialog(null, uid, "Attention");
+            User usr = gusr.getUser()
+            //这部分修改了，改成alert弹窗
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Attention");
+            alert.setHeaderText("YOUR ID IS:");
+            alert.setContentText(usr.getUserID());
+            alert.showAndWait();
+
         });
 
 
