@@ -26,6 +26,14 @@ public class Main extends Application {
     public static Stage getPrimaryStage() {
         return primaryStage;
     }
+    
+    public static Customer getCustomer(){
+        return customer;
+    }
+
+    public static void setCustomer(Customer customer){
+        Main.customer = customer;
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
