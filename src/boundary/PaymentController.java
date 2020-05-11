@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PaymentController implements Initializable {
-    private Customer customer;
+    Customer customer = Main.getCustomer();
 
 //    private RadioButton[3] payment;// 还没有定义
 
