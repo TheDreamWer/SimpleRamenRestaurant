@@ -23,7 +23,7 @@ import entities.*;
 import control.*;
 
 public class DashboardController implements Initializable{
-    Customer customer = new Customer(1);
+    Customer customer = Main.getCustomer();
     @FXML
     private VBox vBoxButton;
 
