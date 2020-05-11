@@ -6,12 +6,13 @@
  */
 package entities;
 
-
 public class Restaurant {
-	
 	private int restID;
 	private String name; 
 	private String intro;
+	private String Postalcode;
+	private String Address;
+	private String RegistrationDate;
 	
 	public void setRestID(int num) {
 		this.restID=num;
@@ -21,9 +22,20 @@ public class Restaurant {
 		this.name=str;
 	}
 	
-	public void setRestIntro(String str) {
-		this.intro=str;
+	public void setRestPostalcode(String Postalcode ) {
+		this.Postalcode=Postalcode;
 	}
+
+	public void setRestIntro(String str) { this.intro=str; }
+
+	public void setRestAddress(String Address) {
+		this.Address=Address;
+	}
+
+	public void setRestRegistrationDate(String RegistrationDate) {
+		this.intro=RegistrationDate;
+	}
+
 	
 	public int getRestID() {
 		return this.restID;
@@ -35,6 +47,18 @@ public class Restaurant {
 	
 	public String getRestIntro() {
 		return this.intro;
+	}
+
+	public String getRestPostalcode() {
+		return this.Postalcode;
+	}
+
+	public String getRestAddress() {
+		return this.Address;
+	}
+
+	public String getRestRegistrationDate() {
+		return this.RegistrationDate;
 	}
 	
 }
