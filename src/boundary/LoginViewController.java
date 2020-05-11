@@ -31,7 +31,7 @@ import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 public class LoginViewController implements Initializable{
-    private Customer customer = new Customer(1);
+    Customer customer = Main.getCustomer();
     @FXML
     private TextField usernameField;
 
