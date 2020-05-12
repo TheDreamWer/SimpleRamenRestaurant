@@ -28,7 +28,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javax.swing.JOptionPane;
+
 
 public class LoginViewController implements Initializable{
     Customer customer = Main.getCustomer();
@@ -94,7 +94,11 @@ public class LoginViewController implements Initializable{
                     showDashboard();
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "USERID or PASSWORD error!!", "Warning", JOptionPane.ERROR_MESSAGE);
+                    Alert alertPane = new Alert(AlertType.WARNING);
+                    alertPane.setTitle("WARNING");
+                    alertPane.setHeaderText("YOUR ID OR PASSWORD ERROR");
+                    alertPane.setContentText("Please try again");
+                    alertPane.showAndWait();
                 }
 //                System.out.println(1);
 
