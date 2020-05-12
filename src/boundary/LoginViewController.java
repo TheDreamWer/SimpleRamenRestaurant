@@ -115,21 +115,30 @@ public class LoginViewController implements Initializable{
         SignUpButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
                     
-            //下面这四个SignUp系列TextField是注册需要的，我自己添上去的        
-            String usrname = SignUpUsrname.getText();
-            String passcode = SignUpPassword.getText();
-            String phonenum = SignUpPhoneNum.getText();
-            String mail = SignUpMail.getText();
+            public void handle(ActionEvent event){
+                Stage stage = new Stage();
+                Parent root = null;
+                try {
+                    // 载入注册页面
+                    FXMLLoader loader = new FXMLLoader();
+                    //loader.setLocation(Main.class.getResource("../boundary/PersonalInfo.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("../boundary/PersonalInfo.fxml"));
+                    Scene scene = new Scene(root);
+                    stage.setTitle("SignUp Page");
+                    stage.setScene(scene);
+                    stage.show();
+                    //primaryStage.setScene(new Scene(root, 793.0, 576.0));
+                    // Main.getPrimaryStage().close();
+                    //Main.setPrimaryStage(primaryStage);
+                    //Main.getPrimaryStage().show();
 
-            GenUser gusr = new GenUser(usrname,passcode,phonenum,mail);
-            User usr = gusr.getUser()
-            //这部分修改了，改成alert弹窗
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Attention");
-            alert.setHeaderText("YOUR ID IS:");
-            alert.setContentText(usr.getUserID());
-            alert.showAndWait();
+                    // 传递主函数
+                    //System.out.println(DashboardController);
 
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         });
 
 
