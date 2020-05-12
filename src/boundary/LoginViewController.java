@@ -86,8 +86,8 @@ public class LoginViewController implements Initializable{
         SignInButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                String usrid = usernameField.getText()
-                String pw = passwordField.getText()
+                String usrid = usernameField.getText();
+                String pw = passwordField.getText();
                 UserOP uop = new UserOP();
                 if(uop.Login(usrid,pw))
                 {
