@@ -49,8 +49,8 @@ public class SingUpController implements Initializable{
     @FXML
     private TextField EmailField
 
-    @FXML
-    private PasswordField passwordField //这个自己加的，PersonalInfo.fxml里没有，希望做前端的能加上去
+   // @FXML
+   // private PasswordField passwordField //这个自己加的，PersonalInfo.fxml里没有，希望做前端的能加上去
 
     @FXML
     private Label labUserID
@@ -61,11 +61,11 @@ public class SingUpController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 String usrname = NameField.getText();
-                String passcode = passwordField.getText();
+                //String passcode = passwordField.getText();
                 String phonenum = PhoneField.getText();
                 String mail = EmailField.getText();
 
-                GenUser gusr = new GenUser(usrname,passcode,phonenum,mail);
+                GenUser gusr = new GenUser(usrname,"12345",phonenum,mail);
                 User usr = gusr.getUser();
                 String uid = usr.getUserID();
                 labUserID.setText("Your ID is:"+uid)
