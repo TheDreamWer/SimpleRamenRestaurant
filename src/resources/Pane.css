@@ -1,12 +1,12 @@
-#btnAddToCart
+#addcart
 {
     -fx-background-color: rgba(238, 83, 0, 0.55);
     -fx-text-fill : rgba(41, 0, 18, 0.96);
 }
-#btnAddToCart:hover{
+#addcart:hover{
     -fx-background-color : rgba(255, 119, 0, 0.42);
 }
-#btnAddToCart:pressed
+#addcart:pressed
 {
     -fx-background-color : rgba(255, 51, 0, 0.71);
 }
@@ -62,22 +62,8 @@
     -fx-background-size: 793px 576px;
     -fx-background-radius: 6px;
 }
-#SignUpPnl {
-    -fx-background-image: url("./images/InfoBG.png");
-    -fx-background-size: 793px 576px;
-    -fx-background-radius: 6px;
-}
-#PayPnl {
-    -fx-background-image: url("./images/PayBG.png");
-    -fx-background-size: 793px 576px;
-    -fx-background-radius: 6px;
-}
-#GeneralPnl {
-    -fx-background-image: url("./images/GeneralBG.png");
-    -fx-background-size: 400px 150x;
-    -fx-background-radius: 6px;
-}
-#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA{
+
+#subNori,#subBoiledEgg,#addBoiledEgg,#subChashu,#addNori,#addChashu,#subBambooShoot,#addBambooShoot{
     -fx-background-color : transparent;
     -fx-text-fill : #000000;
     -fx-background-image:url("./images/button_back.png") ;
@@ -107,17 +93,6 @@
     -fx-background-color : rgba(255, 162, 160, 0.71);
 }
 
-#btnCancelRamen {
-    -fx-background-color: rgba(137, 192, 238, 0.55);
-    -fx-text-fill : rgba(41, 0, 18, 0.96);
-}
-#btnCancelRamen:hover{
-    -fx-background-color : rgba(255, 209, 221, 0.24);
-}
-#btnCancelRamen:pressed
-{
-    -fx-background-color : rgba(71, 148, 255, 0.71);
-}
 
 .scroll-pane {
     -fx-background-color : transparent;
