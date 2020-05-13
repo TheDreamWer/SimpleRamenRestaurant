@@ -1,4 +1,4 @@
-#addcart
+#btnAddToCart
 {
     -fx-background-color: rgba(238, 83, 0, 0.55);
     -fx-text-fill : rgba(41, 0, 18, 0.96);
@@ -11,13 +11,73 @@
     -fx-background-color : rgba(255, 51, 0, 0.71);
 }
 
-AnchorPane {
-    -fx-background-image: url("./images/Dashboardpane1.png");
+#btnPay {
+    -fx-background-color: rgba(187, 189, 191, 0.6);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnPay:hover{
+    -fx-background-color : rgba(111, 111, 121, 0.5);
+}
+#btnPay:pressed
+{
+    -fx-background-color : rgba(230, 231, 238, 0.71);
+}
+
+#btnDeletRamen {
+    -fx-background-color: rgba(255, 42, 49, 0.26);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnDeletRamen:hover{
+    -fx-background-color : rgba(255, 0, 6, 0.55);
+}
+#btnDeletRamen:pressed
+{
+    -fx-background-color : rgba(255, 65, 60, 0.44);
+}
+
+#welcomePnl{
+    -fx-background-image: url("./images/WelcomeBG.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+
+}
+#RamenPnl {
+    -fx-background-image: url("./images/RamenBG1.png");
     -fx-background-size: 793px 576px;
     -fx-background-radius: 6px;
 }
 
-#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA,#addNori,#subNori,#addChashu,#subChashu,#addBoiledEgg,#subBoiledEgg,#addBambooShoot,#subBambooShoot{
+#InfoPnl {
+    -fx-background-image: url("./images/InfoBG.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+#CartPnl {
+    -fx-background-image: url("./images/CartBG4.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+#StampPnl {
+    -fx-background-image: url("./images/StampBG4.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+#SignUpPnl {
+    -fx-background-image: url("./images/InfoBG.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+#PayPnl {
+    -fx-background-image: url("./images/PayBG.png");
+    -fx-background-size: 793px 576px;
+    -fx-background-radius: 6px;
+}
+#GeneralPnl {
+    -fx-background-image: url("./images/GeneralBG.png");
+    -fx-background-size: 400px 150x;
+    -fx-background-radius: 6px;
+}
+#btnExNoriD,#btnExEggD,#btnBamD,#btnExChaD,#btnExNoriA,#btnExEggA,#btnBamA,#btnExChaA{
     -fx-background-color : transparent;
     -fx-text-fill : #000000;
     -fx-background-image:url("./images/button_back.png") ;
@@ -36,13 +96,61 @@ AnchorPane {
 }
 
 #btnCancel {
-    -fx-background-color: rgba(0, 121, 238, 0.55);
+    -fx-background-color: rgba(238, 163, 174, 0.55);
     -fx-text-fill : rgba(41, 0, 18, 0.96);
 }
 #btnCancel:hover{
-    -fx-background-color : rgba(0, 123, 255, 0.24);
+    -fx-background-color : rgba(255, 209, 221, 0.24);
 }
 #btnCancel:pressed
 {
-    -fx-background-color : rgba(41, 117, 255, 0.71);
+    -fx-background-color : rgba(255, 162, 160, 0.71);
+}
+
+#btnCancelRamen {
+    -fx-background-color: rgba(137, 192, 238, 0.55);
+    -fx-text-fill : rgba(41, 0, 18, 0.96);
+}
+#btnCancelRamen:hover{
+    -fx-background-color : rgba(255, 209, 221, 0.24);
+}
+#btnCancelRamen:pressed
+{
+    -fx-background-color : rgba(71, 148, 255, 0.71);
+}
+
+.scroll-pane {
+    -fx-background-color : transparent;
+}
+#RamenItems{
+    -fx-background-image:url("./images/RamenItemBG.png") ;
+}
+#itemRamen{
+    -fx-background-image:url("./images/RamenItemBG.png") ;
+    -fx-border-color: rgba(0, 0, 0, 0.35);
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: rgba(235, 205, 183, 0.42);
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: rgba(89, 44, 41, 0.48);
+    -fx-border-color: rgba(253, 63, 50, 0);
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(89, 8, 0, 0.36);
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: rgba(89, 8, 0, 0.35);
 }
