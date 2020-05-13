@@ -33,31 +33,31 @@ import entities.User;
 import control.GenUser;
 import control.UserOP;
 
-public class SingUpController implements Initializable{
+public class SignUpController implements Initializable{
     @FXML
-    private Button btnCancel
+    private Button btnCancel;
 
     @FXML
-    private Button btnOK
+    private Button btnOK;
 
     @FXML
-    private TextField NameField
+    private TextField NameField;
 
     @FXML
-    private TextField PhoneField
+    private TextField PhoneField;
 
     @FXML
-    private TextField EmailField
+    private TextField EmailField;
 
    // @FXML
    // private PasswordField passwordField //这个自己加的，PersonalInfo.fxml里没有，希望做前端的能加上去
 
     @FXML
-    private Label labUserID
+    private Label labUserID;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        btnOk.setOnAction(new EventHandler<ActionEvent>() {
+        btnOK.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 String usrname = NameField.getText();
@@ -68,7 +68,7 @@ public class SingUpController implements Initializable{
                 GenUser gusr = new GenUser(usrname,"12345",phonenum,mail);
                 User usr = gusr.getUser();
                 String uid = usr.getUserID();
-                labUserID.setText("Your ID is:"+uid)
+                labUserID.setText("Your ID is:"+uid);
             }
         });
 

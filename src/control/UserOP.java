@@ -31,7 +31,7 @@ public class UserOP {
 			while((content=br.readLine())!=null) {
 				String[] str = content.split(",");
 				if(str[0].equals(id)&&str[2].equals(pw)) {
-					if(str[8].equals("1"))
+					if(str[8]=="1")
 					{
 						login=true;
 						fr.close();

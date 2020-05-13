@@ -121,7 +121,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!ExtraChashu.getText().equals("100")) {
                             ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())+2));
-                            tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())+2);
+                            tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraChashu.getText())+2);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -133,7 +133,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!ExtraChashu.getText().equals("0")) {
                             ExtraChashu.setText(String.valueOf(Integer.parseInt(ExtraChashu.getText())-1));
-                            tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraNori.getText())-1);
+                            tempRamen.get(tempRamen.size()-1).setExtra_chashu(Integer.parseInt(ExtraChashu.getText())-1);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -148,7 +148,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!ExtraBoiledEgg.getText().equals("100")) {
                             ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())+1));
-                            tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())+1);
+                            tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraBoiledEgg.getText())+1);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -160,7 +160,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!ExtraBoiledEgg.getText().equals("0")) {
                             ExtraBoiledEgg.setText(String.valueOf(Integer.parseInt(ExtraBoiledEgg.getText())-1));
-                            tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraNori.getText())-1);
+                            tempRamen.get(tempRamen.size()-1).setExtra_boiled_egg(Integer.parseInt(ExtraBoiledEgg.getText())-1);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -174,7 +174,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!BambooShoots.getText().equals("100")) {
                             BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())+1));
-                            tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())+1);
+                            tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(BambooShoots.getText())+1);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -185,7 +185,7 @@ public class DashboardController implements Initializable{
                     public void handle(ActionEvent event) {
                         if (!BambooShoots.getText().equals("0")) {
                             BambooShoots.setText(String.valueOf(Integer.parseInt(BambooShoots.getText())-1));
-                            tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(ExtraNori.getText())-1);
+                            tempRamen.get(tempRamen.size()-1).setBamboo_shoots(Integer.parseInt(BambooShoots.getText())-1);
                             Amount.setText("£" + tempRamen.get(tempRamen.size()-1).calcRamenAmount());
                         }
                     }
@@ -413,13 +413,15 @@ public class DashboardController implements Initializable{
             try {
                 nodes[0] = FXMLLoader.load(getClass().getResource("PersonalInfo.fxml"));
                 pnlPersonalInfo.getChildren().add(nodes[0]);
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
         }
-
+        if(actionEvent.getSource()==btnSignOut)
+        {
+            Main.getPrimaryStage().close();
+        }
     }
 
 }

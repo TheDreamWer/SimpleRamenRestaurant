@@ -88,18 +88,18 @@ public class LoginViewController implements Initializable{
             public void handle(ActionEvent event) {
                 String usrid = usernameField.getText();
                 String pw = passwordField.getText();
-                UserOP uop = new UserOP();
-                if(uop.Login(usrid,pw))
-                {
-                    showDashboard();
-                }
-                else {
-                    Alert alertPane = new Alert(AlertType.WARNING);
-                    alertPane.setTitle("WARNING");
-                    alertPane.setHeaderText("YOUR ID OR PASSWORD ERROR");
-                    alertPane.setContentText("Please try again");
-                    alertPane.showAndWait();
-                }
+//                UserOP uop = new UserOP();
+//                if(uop.Login(usrid,pw))
+//                {
+//                    showDashboard();
+//                }
+//                else {
+//                    Alert alertPane = new Alert(AlertType.WARNING);
+//                    alertPane.setTitle("WARNING");
+//                    alertPane.setHeaderText("YOUR ID OR PASSWORD ERROR");
+//                    alertPane.setContentText("Please try again");
+//                    alertPane.showAndWait();
+//                }
 //                System.out.println(1);
 
             }
@@ -152,7 +152,6 @@ public class LoginViewController implements Initializable{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("../boundary/Home.fxml"));
             Parent root = loader.load();
-            DashboardController  DashboardController = loader.getController();
             primaryStage.setScene(new Scene(root, 1050, 576));
             Main.getPrimaryStage().close();
             Main.setPrimaryStage(primaryStage);

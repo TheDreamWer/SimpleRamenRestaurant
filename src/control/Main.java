@@ -17,7 +17,6 @@ public class Main extends Application {
     private static Stage primaryStage = new Stage();
     
     private static Customer customer = new Customer(1); // set "1" as the default restaurant
-    private UserList userList = new UserList();
 
     public static void setPrimaryStage(Stage primaryStage) {
         Main.primaryStage = primaryStage;
@@ -62,13 +61,12 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
     }
     
     @Override
     public void stop(){
         // Save Order List
-        this.customer.saveOrderList();
+//        this.customer.saveOrderList();
 
         // Save User registed
         // The User information is saved while registration

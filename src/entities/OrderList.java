@@ -14,20 +14,20 @@ public class OrderList {
         return this.list;
     }//返回 arraylist
 
-    public double getSumAmount(){
-        double sumAmount = 0.0;
-        FillOrderInfo getAmount = new FillOrderInfo();
-        for (int i=0;i<this.list.size();i++)
-            sumAmount += getAmount.calcOrderAmount(this.list.get(i).getRamenList());
-        return sumAmount;
-    }
-
-    public float getAmount(long orderId) {
-        FillOrderInfo getAmount = new FillOrderInfo();
-        for (int i=0;i<this.list.size();i++) {
-            if (this.list.get(i).getOrderID()==orderId)
-                return getAmount.calcOrderAmount(this.list.get(i).getRamenList());
-        }
-        return 0;
-    }
+//    public double getSumAmount(){
+//        double sumAmount = 0.0;
+//        FillOrderInfo getAmount = new FillOrderInfo();
+//        for (int i=0;i<this.list.size();i++)
+//            sumAmount += getAmount.calcOrderAmount(this.list.get(i).getRamenList());
+//        return sumAmount;
+//    }
+//
+//    public float getAmount(long orderId) {
+//        FillOrderInfo getAmount = new FillOrderInfo();
+//        for (int i=0;i<this.list.size();i++) {
+//            if (this.list.get(i).getOrderID()==orderId)
+//                return getAmount.calcOrderAmount(this.list.get(i).getRamenList());
+//        }
+//        return 0;
+//    }
 }
