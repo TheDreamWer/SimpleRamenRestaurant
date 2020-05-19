@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="RamenPnl" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.MenuController">
+   <children>
+      <GridPane layoutX="131.0" layoutY="119.0" prefHeight="216.0" prefWidth="581.0">
+         <children>
+            <Label id="soup" text="Soup-Tonkotsu：" textFill="#e7e5e5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Chashu: " textFill="#e7e5e5" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Nori: " textFill="#e7e5e5" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Noodles-Soft: " textFill="#e7e5e5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup_shoyu" text="Soup-Shoyu：" textFill="#e7e5e5" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup_shiou" text="Soup-Shio: " textFill="#e7e5e5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Noodles-Medium: " textFill="#e7e5e5" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Noodles-Firm: " textFill="#e7e5e5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Boiled egg: " textFill="#e7e5e5" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <CheckBox id="tonkotsu" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="shoyu" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="shio" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="soft" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="medium" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="firm" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="egg" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="nori" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="bamboo" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox id="chashu" mnemonicParsing="false" stylesheets="@style.css" text="Empty" textFill="#e7e5e5" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Label id="soup" text="Bamboo shoots: " textFill="#e7e5e5" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="51.0" layoutY="37.0" text="Menu" textFill="#e7e5e5">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="82.0" text="Modify Status" textFill="#05c39d">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="342.0" text="Modify Price" textFill="#eba215">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER_RIGHT" hgap="5.0" layoutX="140.0" layoutY="384.0" minHeight="114.0" prefHeight="114.0" prefWidth="514.0" style="-fx-background-color: #02030A;" stylesheets="@style.css" vgap="5.0">
+         <children>
+            <TextField id="extraNori" fx:id="RestNameField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="1" GridPane.columnIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField id="bamboo_price" fx:id="AddressField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField id="extraChashu" opacity="0.9" prefHeight="30.0" prefWidth="360.0" text="2" GridPane.columnIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField id="extraeEgg" fx:id="ResgDateField" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label id="soup" text="Fixed price:" textFill="#e7e5e5" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Extra boiled egg:" textFill="#e7e5e5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Extra Chashu:" textFill="#e7e5e5" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label id="soup" text="Extra Nori: " textFill="#e7e5e5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="soup" text="Bamboo shoots: " textFill="#e7e5e5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField id="price" fx:id="ResgDateField1" opacity="0.9" prefHeight="30.0" prefWidth="360.0" style="-fx-background-color: 212D4F;" text="9.99" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button id="btnOK" fx:id="btnOK" layoutX="609.0" layoutY="498.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" stylesheets="@style.css" text="OK">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+.button
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+}
+.button:hover{
+-fx-background-color : #10165F;
+}
+.button:pressed
+{
+-fx-background-color : #1620A1;
+}
+
+.scroll-pane {
+    -fx-background-color: #02030A;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #10165F;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+
+#btnOK,ok {
+    -fx-background-color: rgba(22, 119, 238, 0.67);
+    -fx-text-fill : rgb(248, 248, 248);
+}
+#btnOK:hover{
+    -fx-background-color : rgba(71, 148, 255, 0.42);
+}
+#btnOK:pressed
+{
+    -fx-background-color : rgba(33, 114, 255, 0.71);
+}
+
+#btnCancel {
+    -fx-background-color: rgba(238, 84, 68, 0.71);
+    -fx-text-fill : rgb(248, 248, 248);
+}
+#btnCancel:hover{
+    -fx-background-color : rgba(255, 153, 156, 0.58);
+}
+#btnCancel:pressed
+{
+    -fx-background-color : rgba(255, 77, 81, 0.71);
+}
+
+#orderIDbtn{
+    -fx-background-color :#02030A;
+}
+#orderIDbtn:hover{
+    -fx-background-color : #10165F;
+}
+#orderIDbtn:pressed
+{
+    -fx-background-color : #1620A1;
+}

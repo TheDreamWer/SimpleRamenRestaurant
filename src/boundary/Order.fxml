@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.OrderController">
+   <children>
+      <ScrollPane layoutX="70.0" layoutY="124.0" prefHeight="420.0" prefWidth="194.0" stylesheets="@style.css">
+         <content>
+            <VBox fx:id="orderItem" prefHeight="469.0" prefWidth="192.0" style="-fx-background-color: #02030A;" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="284.0" layoutY="124.0" prefHeight="420.0" prefWidth="443.0" stylesheets="@style.css">
+         <content>
+            <Pane fx:id="OrderInfoPane" prefHeight="897.0" prefWidth="431.0" style="-fx-background-color: #02030A;" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="61.0" layoutY="47.0" text="Restaurant Orders" textFill="#e7e5e5">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="82.0" layoutY="88.0" prefHeight="42.0" prefWidth="670.0" spacing="80.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Label text="Order ID" textFill="#eba215">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Detailed Information" textFill="#05c39d">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.CustomerController">
+   <children>
+      <Label layoutX="67.0" layoutY="35.0" text="Customer Information" textFill="#e7e5e5">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="49.0" layoutY="105.0" prefHeight="42.0" prefWidth="712.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Label prefHeight="32.0" prefWidth="85.0" text="User ID" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="User Name" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Email" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="60.0" />
+               </padding>
+            </Label>
+            <Label text="Phone number" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Label>
+            <Label text="Amount" textFill="#e7e5e5">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="58.0" layoutY="153.0" prefHeight="377.0" prefWidth="675.0" stylesheets="@style.css">
+         <content>
+            <VBox fx:id="CustomerItems" prefHeight="375.0" prefWidth="672.0" spacing="5.0" style="-fx-background-color: #02030A;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

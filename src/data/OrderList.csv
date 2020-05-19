@@ -1,0 +1,8 @@
+OrderId,Code,Amount,Method,GenerateTime,Soup,Noodles,Level,Nori,Chashu,B_egg,Spic,E_nori,E_egg,Bambs,E_cha,Num,UserID,Name
+20032810,1,19.8,null,2020-03-28 22:30:25,Tonkosu,Soft,0,false,false,false,0,0,0,0,0,1,123456,zwc
+20032810,1,19.8,null,2020-03-28 22:30:25,Tonkosu,Soft,0,false,false,false,0,0,0,0,0,2,123456,zwc
+20033210,1,19.8,null,2020-03-32 21:38:25,Tonkosu,Soft,0,false,false,false,0,0,0,0,0,2,123456,zwc
+20033210,1,19.8,null,2020-03-32 21:38:25,Tonkosu,Soft,1,ture,false,false,1,1,1,1,1,1,123456,zwc
+20033220,2,19.8,null,2020-03-32 21:40:25,Tonkosu,Soft,2,false,false,false,2,2,2,2,2,1,123456,zwc
+20033231,3,19.8,zhifubao,2020-03-32 21:41:25,Tonkosu,Soft,0,false,false,false,3,3,0,3,0,3,123456,zwc
+20033241,4,20.0,weixin,2020-03-32 21:42:25,Tonkosu,Hard,4,false,false,false,0,0,0,0,0,1,123456,zwc
