@@ -1,0 +1,75 @@
+package control;
+
+import entities.Restaurant;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import org.w3c.dom.Node;
+
+import java.io.IOException;
+
+public class Main extends Application {
+    private double x, y;
+    private static Stage primaryStage = new Stage();
+    
+    private static Customer customer = new Customer(1); // set "1" as the default restaurant
+
+    public static void setPrimaryStage(Stage primaryStage) {
+        Main.primaryStage = primaryStage;
+    }
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+    
+    public static Customer getCustomer(){
+        return customer;
+    }
+
+    public static void setCustomer(Customer customer){
+        Main.customer = customer;
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../boundary/LoginView.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        //set stage borderless
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+
+
+        //drag it here
+        root.setOnMousePressed(event -> {
+            x = event.getSceneX();
+            y = event.getSceneY();
+        });
+        root.setOnMouseDragged(event -> {
+
+            primaryStage.setX(event.getScreenX() - x);
+            primaryStage.setY(event.getScreenY() - y);
+
+        });
+        primaryStage.show();
+
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+    
+    @Override
+    public void stop() throws IOException {
+        customer.saveOrderList();
+        if (customer.getUser() != null){
+            customer.saveUser();
+            customer.logoutUser();
+        }
+    }
+}

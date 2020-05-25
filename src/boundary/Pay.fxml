@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="PayPnl" prefHeight="576.0" prefWidth="793.0" stylesheets="@../resources/Pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundary.PayController">
+   <children>
+      <Button id="btnOK" fx:id="btnOK" cancelButton="true" layoutX="327.0" layoutY="329.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="OK">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="51.0" layoutY="40.0" text="Select a payment method">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <VBox layoutX="296.0" layoutY="137.0" prefHeight="151.0" prefWidth="202.0" spacing="30.0">
+         <children>
+            <RadioButton id="credit" mnemonicParsing="false" text="Credit Card">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="paypal" mnemonicParsing="false" text="PayPal">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="stamps" disable="true" mnemonicParsing="false" text="Stamps">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </VBox>
+      <Label id="notice" layoutX="473.0" layoutY="260.0" text="(Do not have enough stamps)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

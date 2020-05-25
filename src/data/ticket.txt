@@ -1,2 +1,34 @@
-order_ID,code,order_amount,payment_method,generateTime,soup,noodles,onion_level,nori,chashu,boiled_egg,spiciness,extra_nori,extra_boiled_egg,Bamboo_shoots,extra_chashu
-0,0,0.0,null,2020-04-15 18:45:50,Shoyu,Medium,1,true,true,true,1,2,2,2,3,
+Werlcome to Totoro Ramen!
+
+User ID: 2
+User Name: 123	test2
+Date: 2020-05-25 21:13:17
+Order ID: 202005252113070
+Order Amount: 48.0
+Code: 1
+Eat in
+=================================
+---------------  0  --------------
+Soup: Tonkosu
+Noodles: Soft
+Onion Level: : 0
+Bamboo Shoots: 0
+Nori : true  Extra: 2
+Chashu: false  Extra: 0
+Boiled Egg: false   Extra: 0
+Spiciness: 1
+Number : 1
+---------------------------------
+
+---------------  1  --------------
+Soup: Tonkosu
+Noodles: Soft
+Onion Level: : 0
+Bamboo Shoots: 0
+Nori : false  Extra: 0
+Chashu: false  Extra: 0
+Boiled Egg: false   Extra: 0
+Spiciness: 0
+Number : 1
+---------------------------------
+
